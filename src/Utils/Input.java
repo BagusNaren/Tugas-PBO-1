@@ -1,5 +1,6 @@
 package Utils;
 
+import Menu.Menu;
 import java.util.Scanner;
 
 public class Input {
@@ -50,11 +51,11 @@ public class Input {
     }
 
     public static void pressEnter() {
-        System.out.println("Tekan Enter untuk melanjutkan...");
+        Menu.tekanEnterUntukLanjut();
         scanner.nextLine();
     }
 
     public static void waitForEnter() {
-        pressEnter(); // optional: alias
+        Menu.tekanEnterUntukLanjut();
     }
 }

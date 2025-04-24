@@ -13,7 +13,7 @@ public class Menu {
         System.out.println("||                                                                   ||");
         System.out.println("||                              LOGIN PAGE                           ||");
         System.out.println("-----------------------------------------------------------------------");
-        System.out.println("||                     Pilih Tipe User Di Bawah                      ||");
+        System.out.println("||                       Pilih Tipe User Di Bawah                    ||");
         System.out.println("||                                                                   ||");
         System.out.println("||          [1] Administrator                  [2] Customer          ||");
         System.out.println("||                           [0] Keluar Program                      ||");
@@ -24,7 +24,7 @@ public class Menu {
     public static void headerUsernameDanPassword() {
         System.out.println("=======================================================================");
         System.out.println("||                             L O G I N                             ||");
-        System.out.println("||        Mohon Masukkan Username dan Password untuk melanjutkan     ||");
+        System.out.println("||        Mohon Masukkan Username dan Password untuk Melanjutkan     ||");
         System.out.println("=======================================================================");
     }
 
@@ -32,7 +32,7 @@ public class Menu {
         System.out.println("=======================================================================");
         System.out.println("||                             LOGIN GAGAL                           ||");
         System.out.println("||               Periksa kembali Username dan Password Anda          ||");
-        System.out.println("||                    Tekan Enter untuk melanjutkan                  ||");
+        System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }
@@ -40,7 +40,7 @@ public class Menu {
     public static void loggedInGreetingAdmin(String userName) {
         System.out.println("=======================================================================");
         System.out.printf("||                        Halo Admin, %-31s||\n", Account.ADMIN_NAME);
-        System.out.println("||                    Tekan Enter untuk melanjutkan                  ||");
+        System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }
@@ -48,7 +48,7 @@ public class Menu {
     public static void loggedInGreetingCustomer(String userName) {
         System.out.println("=======================================================================");
         System.out.printf("||                       Halo Customer, %-29s||\n", Account.CUSTOMER_NAME);
-        System.out.println("||                    Tekan Enter untuk melanjutkan                  ||");
+        System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }
@@ -70,8 +70,9 @@ public class Menu {
         System.out.println("-----------------------------------------------------------------------");
         System.out.println("||   [1] Tambah Saham                                                ||");
         System.out.println("||   [2] Ubah Harga Saham                                            ||");
-        System.out.println("||   [3] Lihat Daftar Saham                                           |");
-        System.out.println("||   [4] Kembali ke Menu Utama                                       ||");
+        System.out.println("||   [3] Lihat Daftar Saham                                          ||");
+        System.out.println("||   [4] Hapus Saham                                                 ||");
+        System.out.println("||   [5] Kembali ke Menu Utama                                       ||");
         System.out.println("=======================================================================");
         System.out.print("Masukkan pilihan: ");
     }
@@ -82,7 +83,8 @@ public class Menu {
         System.out.println("-----------------------------------------------------------------------");
         System.out.println("||   [1] Tambah SBN                                                  ||");
         System.out.println("||   [2] Lihat Daftar SBN                                            ||");
-        System.out.println("||   [3] Kembali ke Menu Utama                                       ||");
+        System.out.println("||   [3] Hapus SBN                                                   ||");
+        System.out.println("||   [4] Kembali ke Menu Utama                                       ||");
         System.out.println("=======================================================================");
         System.out.print("Masukkan pilihan: ");
     }
@@ -120,7 +122,7 @@ public class Menu {
     public static void inputTambahSBN() {
         System.out.println("=======================================================================");
         System.out.println("||                            TAMBAH SBN                             ||");
-        System.out.println("|| Masukkan Nama SBN, Bunga(%), Jangka Waktu, dan Kuota Nasional     ||");
+        System.out.println("||   Masukkan Nama SBN, Bunga(%), Jangka Waktu, dan Kuota Nasional   ||");
         System.out.println("=======================================================================");
     }
 
@@ -177,7 +179,7 @@ public class Menu {
         System.out.println("=======================================================================");
         System.out.println("||                               GAGAL                               ||");
         System.out.printf("||                        %s\n", pesan);
-        System.out.println("||                    Tekan Enter untuk kembali                      ||");
+        System.out.println("||                    Tekan Enter untuk Kembali                      ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }
@@ -186,15 +188,22 @@ public class Menu {
         System.out.println("=======================================================================");
         System.out.println("||                            BERHASIL                               ||");
         System.out.printf("||                        %s\n", pesan);
-        System.out.println("||                   Tekan Enter untuk kembali                       ||");
+        System.out.println("||                   Tekan Enter untuk Kembali                       ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }
 
     public static void tekanEnterUntukLanjut() {
         System.out.println("-----------------------------------------------------------------------");
-        System.out.println("||                   Tekan Enter untuk melanjutkan                   ||");
+        System.out.println("||                   Tekan Enter untuk Melanjutkan                   ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
+    }
+
+    public static void ucapanTerimaKasih() {
+        System.out.println("=======================================================================");
+        System.out.println("||                    TERIMA KASIH TELAH MENGGUNAKAN                 ||");
+        System.out.println("||                        APLIKASI INVESTASI KAMI!                   ||");
+        System.out.println("=======================================================================");
     }
 }

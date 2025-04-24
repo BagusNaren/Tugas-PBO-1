@@ -24,11 +24,11 @@ public class Main {
                     break;
                 case 0:
                     running = false;
-                    System.out.println("Terima kasih telah menggunakan aplikasi investasi!");
-                    Input.pressEnter();
+                    Clear.clearScreen();
+                    Menu.ucapanTerimaKasih();
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("Pilihan tidak valid");
                     Input.pressEnter();
                     break;
             }

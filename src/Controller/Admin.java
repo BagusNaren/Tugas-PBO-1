@@ -63,7 +63,7 @@ public class Admin {
                     break;
                 case 3:
                     View.showSahamList(sahamList);
-                    Menu.tekanEnterUntukLanjut();
+                    Input.waitForEnter();
                     break;
                 case 4:
                     running = false;
@@ -87,7 +87,7 @@ public class Admin {
                     break;
                 case 2:
                     View.showSbnList(sbnList);
-                    Menu.tekanEnterUntukLanjut();
+                    Input.waitForEnter();
                     break;
                 case 3:
                     running = false;
@@ -105,9 +105,8 @@ public class Admin {
         int harga = Input.nextInt("Harga: ");
         sahamList.add(new Saham(kode, nama, harga));
         Menu.pesanSukses("Saham berhasil ditambahkan!");
-        System.out.println("\nDaftar Saham Terbaru:");
         View.showSahamList(sahamList);
-        Menu.tekanEnterUntukLanjut();
+        Input.waitForEnter();
     }
 
     private void ubahHargaSaham() {
@@ -128,15 +127,14 @@ public class Admin {
     private void tambahSBN() {
         Menu.inputTambahSBN();
         String nama = Input.nextLine("Nama SBN: ");
-        double bunga = Double.parseDouble(Input.nextLine("Bunga (%): "));
+        double bunga = Input.nextDouble("Bunga (%): ");
         int jangka = Input.nextInt("Jangka Waktu (tahun): ");
         String jatuhTempo = Input.nextLine("Tanggal Jatuh Tempo (yyyy-MM-dd): ");
         int kuota = Input.nextInt("Kuota Nasional: ");
         sbnList.add(new SuratBerhargaNegara(nama, bunga, jangka, jatuhTempo, kuota));
         Menu.pesanSukses("SBN berhasil ditambahkan!");
-        System.out.println("\nDaftar SBN Terbaru:");
         View.showSbnList(sbnList);
-        Menu.tekanEnterUntukLanjut();
+        Input.waitForEnter();
     }
 
     public static List<Saham> getSahamList() {

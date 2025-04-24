@@ -16,11 +16,13 @@ public class Purchase {
         int jumlah = Input.nextInt("Jumlah lembar: ");
         sahamCustomer.put(kode, sahamCustomer.getOrDefault(kode, 0) + jumlah);
         System.out.println("Berhasil membeli saham!");
+        Input.waitForEnter();
     }
 
     public static void sellStock(Map<String, Integer> sahamCustomer) {
         if (sahamCustomer.isEmpty()) {
-            System.out.println("Tidak ada saham yang dimiliki.");
+            System.out.println("Tidak ada saham yang dimiliki");
+            Input.waitForEnter();
             return;
         }
         System.out.println("Saham yang dimiliki:");
@@ -34,8 +36,9 @@ public class Purchase {
             if (sahamCustomer.get(kode) == 0) sahamCustomer.remove(kode);
             System.out.println("Berhasil menjual saham!");
         } else {
-            System.out.println("Gagal: jumlah saham tidak mencukupi.");
+            System.out.println("Gagal: Jumlah saham tidak mencukupi");
         }
+        Input.waitForEnter();
     }
 
     public static void buySBN(Map<String, Integer> sbnCustomer) {
@@ -50,12 +53,14 @@ public class Purchase {
                     sbnCustomer.put(nama, sbnCustomer.getOrDefault(nama, 0) + nominal);
                     System.out.println("Berhasil membeli SBN!");
                 } else {
-                    System.out.println("Gagal: kuota tidak mencukupi.");
+                    System.out.println("Gagal: Kuota tidak mencukupi");
                 }
+                Input.waitForEnter();
                 return;
             }
         }
-        System.out.println("SBN tidak ditemukan.");
+        System.out.println("SBN tidak ditemukan");
+        Input.waitForEnter();
     }
 
     public static void simulasiSBN() {
@@ -72,7 +77,8 @@ public class Purchase {
             double kuponBulanan = bunga / 12 / 100 * 0.9 * nominal;
             System.out.println("Estimasi kupon per bulan: Rp " + (int)kuponBulanan);
         } else {
-            System.out.println("SBN tidak ditemukan.");
+            System.out.println("SBN tidak ditemukan");
         }
+        Input.waitForEnter();
     }
 }

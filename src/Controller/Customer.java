@@ -43,12 +43,12 @@ public class Customer {
                 case 6:
                     Menu.menuLihatSaham();
                     View.showSahamList(Admin.getSahamList());
-                    Menu.tekanEnterUntukLanjut();
+                    Input.waitForEnter();
                     break;
                 case 7:
                     Menu.menuLihatSBN();
                     View.showSbnList(Admin.getSbnList());
-                    Menu.tekanEnterUntukLanjut();
+                    Input.waitForEnter();
                     break;
                 case 8:
                     running = false;

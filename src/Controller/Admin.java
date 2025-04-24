@@ -3,6 +3,7 @@ package Controller;
 import Utils.Clear;
 import Utils.Input;
 import View.View;
+import Menu.Menu;
 import Model.Saham;
 import Model.SuratBerhargaNegara;
 
@@ -27,11 +28,8 @@ public class Admin {
         boolean running = true;
         while (running) {
             Clear.clearScreen();
-            System.out.println("=== Menu Admin ===");
-            System.out.println("1. Saham");
-            System.out.println("2. SBN");
-            System.out.println("3. Logout");
-            int pilihan = Input.nextInt("Pilih: ");
+            Menu.tampilanMenuAdmin();
+            int pilihan = Input.nextInt("");
 
             switch (pilihan) {
                 case 1:
@@ -44,7 +42,7 @@ public class Admin {
                     running = false;
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid");
+                    Menu.pesanGagal("Pilihan tidak valid");
             }
         }
     }
@@ -53,12 +51,8 @@ public class Admin {
         boolean running = true;
         while (running) {
             Clear.clearScreen();
-            System.out.println("=== Menu Saham ===");
-            System.out.println("1. Tambah Saham");
-            System.out.println("2. Ubah Harga Saham");
-            System.out.println("3. Lihat Daftar Saham");
-            System.out.println("4. Kembali");
-            int pilihan = Input.nextInt("Pilih: ");
+            Menu.tampilanMenuAdminSaham();
+            int pilihan = Input.nextInt("");
 
             switch (pilihan) {
                 case 1:
@@ -69,13 +63,13 @@ public class Admin {
                     break;
                 case 3:
                     View.showSahamList(sahamList);
-                    Input.waitForEnter();
+                    Menu.tekanEnterUntukLanjut();
                     break;
                 case 4:
                     running = false;
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid");
+                    Menu.pesanGagal("Pilihan tidak valid");
             }
         }
     }
@@ -84,11 +78,8 @@ public class Admin {
         boolean running = true;
         while (running) {
             Clear.clearScreen();
-            System.out.println("=== Menu SBN ===");
-            System.out.println("1. Tambah SBN");
-            System.out.println("2. Lihat Daftar SBN");
-            System.out.println("3. Kembali");
-            int pilihan = Input.nextInt("Pilih: ");
+            Menu.tampilanMenuAdminSBN();
+            int pilihan = Input.nextInt("");
 
             switch (pilihan) {
                 case 1:
@@ -96,56 +87,56 @@ public class Admin {
                     break;
                 case 2:
                     View.showSbnList(sbnList);
-                    Input.waitForEnter();
+                    Menu.tekanEnterUntukLanjut();
                     break;
                 case 3:
                     running = false;
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid");
+                    Menu.pesanGagal("Pilihan tidak valid");
             }
         }
     }
 
     private void tambahSaham() {
+        Menu.inputTambahSaham();
         String kode = Input.nextLine("Kode Saham: ");
         String nama = Input.nextLine("Nama Perusahaan: ");
         int harga = Input.nextInt("Harga: ");
         sahamList.add(new Saham(kode, nama, harga));
-        System.out.println("Saham berhasil ditambahkan!");
+        Menu.pesanSukses("Saham berhasil ditambahkan!");
         System.out.println("\nDaftar Saham Terbaru:");
         View.showSahamList(sahamList);
-        Input.waitForEnter();
+        Menu.tekanEnterUntukLanjut();
     }
 
     private void ubahHargaSaham() {
+        Menu.inputUbahHargaSaham();
         View.showSahamList(sahamList);
         String kode = Input.nextLine("Masukkan kode saham: ");
-        for (int i = 0; i < sahamList.size(); i++) {
-            Saham s = sahamList.get(i);
+        for (Saham s : sahamList) {
             if (s.getKode().equalsIgnoreCase(kode)) {
                 int hargaBaru = Input.nextInt("Harga baru: ");
                 s.setHarga(hargaBaru);
-                System.out.println("Harga saham berhasil diubah!");
-                Input.waitForEnter();
+                Menu.pesanSukses("Harga saham berhasil diubah!");
                 return;
             }
         }
-        System.out.println("Saham tidak ditemukan!");
-        Input.waitForEnter();
+        Menu.pesanGagal("Saham tidak ditemukan!");
     }
 
     private void tambahSBN() {
+        Menu.inputTambahSBN();
         String nama = Input.nextLine("Nama SBN: ");
         double bunga = Double.parseDouble(Input.nextLine("Bunga (%): "));
         int jangka = Input.nextInt("Jangka Waktu (tahun): ");
         String jatuhTempo = Input.nextLine("Tanggal Jatuh Tempo (yyyy-MM-dd): ");
         int kuota = Input.nextInt("Kuota Nasional: ");
         sbnList.add(new SuratBerhargaNegara(nama, bunga, jangka, jatuhTempo, kuota));
-        System.out.println("SBN berhasil ditambahkan!");
+        Menu.pesanSukses("SBN berhasil ditambahkan!");
         System.out.println("\nDaftar SBN Terbaru:");
         View.showSbnList(sbnList);
-        Input.waitForEnter();
+        Menu.tekanEnterUntukLanjut();
     }
 
     public static List<Saham> getSahamList() {
@@ -154,5 +145,5 @@ public class Admin {
 
     public static List<SuratBerhargaNegara> getSbnList() {
         return sbnList;
-}
+    }
 }

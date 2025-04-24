@@ -70,7 +70,7 @@ public class Menu {
         System.out.println("-----------------------------------------------------------------------");
         System.out.println("||   [1] Tambah Saham                                                ||");
         System.out.println("||   [2] Ubah Harga Saham                                            ||");
-        System.out.println("||   [3] Hapus Saham                                                 ||");
+        System.out.println("||   [3] Lihat Daftar Saham                                           |");
         System.out.println("||   [4] Kembali ke Menu Utama                                       ||");
         System.out.println("=======================================================================");
         System.out.print("Masukkan pilihan: ");
@@ -81,7 +81,8 @@ public class Menu {
         System.out.println("||                         KELOLA SBN - ADMIN                        ||");
         System.out.println("-----------------------------------------------------------------------");
         System.out.println("||   [1] Tambah SBN                                                  ||");
-        System.out.println("||   [2] Kembali ke Menu Utama                                       ||");
+        System.out.println("||   [2] Lihat Daftar SBN                                            ||");
+        System.out.println("||   [3] Kembali ke Menu Utama                                       ||");
         System.out.println("=======================================================================");
         System.out.print("Masukkan pilihan: ");
     }
@@ -95,7 +96,9 @@ public class Menu {
         System.out.println("||   [3] Beli SBN                                                    ||");
         System.out.println("||   [4] Simulasi Bunga SBN                                          ||");
         System.out.println("||   [5] Lihat Portofolio                                            ||");
-        System.out.println("||   [6] Logout                                                      ||");
+        System.out.println("||   [6] Lihat Daftar Saham                                          ||");
+        System.out.println("||   [7] Lihat Daftar SBN                                            ||");
+        System.out.println("||   [8] Logout                                                      ||");
         System.out.println("=======================================================================");
         System.out.print("Masukkan pilihan: ");
     }

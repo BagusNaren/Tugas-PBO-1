@@ -1,9 +1,9 @@
 import Auth.Login;
 import Controller.Admin;
 import Controller.Customer;
-import Menu.Menu;
 import Utils.Clear;
 import Utils.Input;
+import Menu.Menu;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +17,11 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
-                    prosesLogin();
+                    prosesLogin("admin");
                     break;
                 case 2:
+                    prosesLogin("customer");
+                    break;
                 case 0:
                     running = false;
                     System.out.println("Terima kasih telah menggunakan aplikasi investasi!");
@@ -33,7 +35,7 @@ public class Main {
         }
     }
 
-    private static void prosesLogin() {
+    private static void prosesLogin(String expectedRole) {
         Clear.clearScreen();
         Menu.headerUsernameDanPassword();
 
@@ -42,18 +44,16 @@ public class Main {
 
         String role = Login.login(username, password);
 
-        switch (role) {
-            case "admin":
+        if (role.equals(expectedRole)) {
+            if (role.equals("admin")) {
                 Menu.loggedInGreetingAdmin(username);
                 new Admin().menu();
-                break;
-            case "customer":
+            } else {
                 Menu.loggedInGreetingCustomer(username);
                 new Customer().menu();
-                break;
-            default:
-                Menu.errorLogin();
-                break;
+            }
+        } else {
+            Menu.errorLogin();
         }
     }
 }

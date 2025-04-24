@@ -12,7 +12,7 @@ public class View {
         System.out.println("||                        DAFTAR SAHAM TERSEDIA                      ||");
         System.out.println("=======================================================================");
         System.out.println("Kode        | Nama Perusahaan                 | Harga");
-        System.out.println("---------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------");
         for (Saham s : list) {
             System.out.printf("%-12s| %-32s| Rp %,d%n",
                     s.getKode(), s.getNamaPerusahaan(), s.getHarga());

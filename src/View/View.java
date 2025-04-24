@@ -46,7 +46,6 @@ public class View {
             }
         }
         System.out.println("=======================================================================");
-
         System.out.println("||                           PORTOFOLIO SBN                          ||");
         System.out.println("=======================================================================");
         if (sbnCustomer.isEmpty()) {

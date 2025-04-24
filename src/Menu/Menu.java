@@ -161,20 +161,6 @@ public class Menu {
         System.out.println("=======================================================================");
     }
 
-    public static void menuLihatSaham() {
-        System.out.println("=======================================================================");
-        System.out.println("||                        DAFTAR SAHAM TERSEDIA                      ||");
-        System.out.println("||      Menampilkan Semua Saham yang Tersedia di Pasar Saat Ini      ||");
-        System.out.println("=======================================================================");
-    }
-
-    public static void menuLihatSBN() {
-        System.out.println("=======================================================================");
-        System.out.println("||                        DAFTAR SBN TERSEDIA                        ||");
-        System.out.println("||         Menampilkan Semua SBN yang Tersedia untuk Customer        ||");
-        System.out.println("=======================================================================");
-    }
-
     public static void pesanGagal(String pesan) {
         System.out.println("=======================================================================");
         System.out.println("||                               GAGAL                               ||");

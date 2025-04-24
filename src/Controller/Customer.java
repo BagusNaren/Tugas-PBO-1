@@ -41,12 +41,10 @@ public class Customer {
                     View.showPortofolio(sahamCustomer, sbnCustomer);
                     break;
                 case 6:
-                    Menu.menuLihatSaham();
                     View.showSahamList(Admin.getSahamList());
                     Input.waitForEnter();
                     break;
                 case 7:
-                    Menu.menuLihatSBN();
                     View.showSbnList(Admin.getSbnList());
                     Input.waitForEnter();
                     break;

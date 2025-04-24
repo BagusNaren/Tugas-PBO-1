@@ -30,6 +30,7 @@ public class Main {
                 default:
                     System.out.println("Pilihan tidak valid");
                     Input.pressEnter();
+
                     break;
             }
         }

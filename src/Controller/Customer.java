@@ -52,7 +52,7 @@ public class Customer {
                     running = false;
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid");
+                    Menu.pesanGagal("Pilihan tidak valid");
             }
         }
     }

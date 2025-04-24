@@ -12,7 +12,7 @@ public class Input {
             System.out.print(message);
             input = scanner.nextLine().trim();
             if (input.isEmpty()) {
-                System.out.println("Input tidak boleh kosong. Silakan coba lagi.");
+                Menu.pesanGagal("Input tidak boleh kosong. Silakan coba lagi.");
             }
         } while (input.isEmpty());
         return input;
@@ -28,7 +28,7 @@ public class Input {
                 number = Integer.parseInt(input.trim());
                 valid = true;
             } catch (NumberFormatException e) {
-                System.out.println("Input harus berupa angka. Silakan coba lagi.");
+                Menu.pesanGagal("Input harus berupa angka. Silakan coba lagi.");
             }
         }
         return number;
@@ -44,15 +44,10 @@ public class Input {
                 number = Double.parseDouble(input.trim());
                 valid = true;
             } catch (NumberFormatException e) {
-                System.out.println("Input harus berupa angka (desimal). Silakan coba lagi.");
+                Menu.pesanGagal("Input harus berupa angka (desimal). Silakan coba lagi.");
             }
         }
         return number;
-    }
-
-    public static void pressEnter() {
-        Menu.tekanEnterUntukLanjut();
-        scanner.nextLine();
     }
 
     public static void waitForEnter() {

@@ -28,9 +28,7 @@ public class Main {
                     Menu.ucapanTerimaKasih();
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid");
-                    Input.pressEnter();
-
+                    Menu.pesanGagal("Pilihan tidak valid");
                     break;
             }
         }

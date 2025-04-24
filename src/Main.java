@@ -1,6 +1,7 @@
 import Auth.Login;
 import Controller.Admin;
 import Controller.Customer;
+import Menu.Menu;
 import Utils.Clear;
 import Utils.Input;
 
@@ -10,15 +11,16 @@ public class Main {
 
         while (running) {
             Clear.clearScreen();
-            tampilkanMenuUtama();
+            Menu.tampilanLogin();
 
-            int pilihan = Input.nextInt("Pilih menu: ");
+            int pilihan = Input.nextInt("");
 
             switch (pilihan) {
                 case 1:
                     prosesLogin();
                     break;
                 case 2:
+                case 0:
                     running = false;
                     System.out.println("Terima kasih telah menggunakan aplikasi investasi!");
                     Input.pressEnter();
@@ -31,17 +33,10 @@ public class Main {
         }
     }
 
-    private static void tampilkanMenuUtama() {
-        System.out.println("+==================================+");
-        System.out.println("|      Aplikasi Investasi          |");
-        System.out.println("+==================================+");
-        System.out.println("| 1. Login                         |");
-        System.out.println("| 2. Keluar                        |");
-        System.out.println("+==================================+");
-    }
-
     private static void prosesLogin() {
         Clear.clearScreen();
+        Menu.headerUsernameDanPassword();
+
         String username = Input.nextLine("Username: ");
         String password = Input.nextLine("Password: ");
 
@@ -49,17 +44,15 @@ public class Main {
 
         switch (role) {
             case "admin":
+                Menu.loggedInGreetingAdmin(username);
                 new Admin().menu();
                 break;
             case "customer":
+                Menu.loggedInGreetingCustomer(username);
                 new Customer().menu();
                 break;
             default:
-                System.out.println("+==================================+");
-                System.out.println("|           Login gagal!           |");
-                System.out.println("|  Username atau password salah.   |");
-                System.out.println("+==================================+");
-                Input.pressEnter();
+                Menu.errorLogin();
                 break;
         }
     }

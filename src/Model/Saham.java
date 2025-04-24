@@ -22,7 +22,6 @@ public class Saham {
     public int getHarga() { return harga; }
     public void setHarga(int harga) { this.harga = harga; }
 
-    // Tambahan:
     public static List<Saham> getAll() {
         return daftarSaham;
     }

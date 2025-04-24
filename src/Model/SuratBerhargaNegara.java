@@ -28,7 +28,6 @@ public class SuratBerhargaNegara {
     public int getKuotaNasional() { return kuotaNasional; }
     public void kurangiKuota(int nominal) { this.kuotaNasional -= nominal; }
 
-    // Tambahan:
     public static List<SuratBerhargaNegara> getAll() {
         return daftarSBN;
     }

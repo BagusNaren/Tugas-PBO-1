@@ -14,6 +14,20 @@ public class Purchase {
         List<Saham> sahamList = Admin.getSahamList();
         View.showSahamList(sahamList);
         String kode = Input.nextLine("Masukkan kode saham: ");
+        boolean ditemukan = false;
+
+        for (Saham s : sahamList) {
+            if (s.getKode().equalsIgnoreCase(kode)) {
+                ditemukan = true;
+                break;
+            }
+        }
+
+        if (!ditemukan) {
+            Menu.pesanGagal("Saham tidak tersedia");
+            return;
+        }
+
         int jumlah = Input.nextInt("Jumlah lembar: ");
         sahamCustomer.put(kode, sahamCustomer.getOrDefault(kode, 0) + jumlah);
         Menu.pesanSukses("Berhasil membeli saham!");

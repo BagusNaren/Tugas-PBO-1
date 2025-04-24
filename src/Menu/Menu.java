@@ -164,19 +164,29 @@ public class Menu {
     public static void pesanGagal(String pesan) {
         System.out.println("=======================================================================");
         System.out.println("||                               GAGAL                               ||");
-        System.out.printf("||                        %s\n", pesan);
-        System.out.println("||                    Tekan Enter untuk Kembali                      ||");
+        cetakTengahDenganKotak(pesan);
+        System.out.println("||                      Tekan Enter untuk Kembali                    ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }
 
     public static void pesanSukses(String pesan) {
         System.out.println("=======================================================================");
-        System.out.println("||                            BERHASIL                               ||");
-        System.out.printf("||                        %s\n", pesan);
-        System.out.println("||                   Tekan Enter untuk Kembali                       ||");
+        System.out.println("||                             BERHASIL                              ||");
+        cetakTengahDenganKotak(pesan);
+        System.out.println("||                     Tekan Enter untuk Kembali                     ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
+    }
+
+    private static void cetakTengahDenganKotak(String pesan) {
+        int lebar = 67;
+        if (pesan.length() > lebar) {
+            pesan = pesan.substring(0, lebar);
+        }
+        int paddingKiri = (lebar - pesan.length()) / 2;
+        int paddingKanan = lebar - pesan.length() - paddingKiri;
+        System.out.printf("||%" + paddingKiri + "s%s%" + paddingKanan + "s||\n", "", pesan, "");
     }
 
     public static void tekanEnterUntukLanjut() {

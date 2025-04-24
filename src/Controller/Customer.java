@@ -39,6 +39,7 @@ public class Customer {
                 case 5:
                     Menu.lihatPortofolio();
                     View.showPortofolio(sahamCustomer, sbnCustomer);
+                    Input.waitForEnter();
                     break;
                 case 6:
                     View.showSahamList(Admin.getSahamList());

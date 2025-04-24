@@ -42,7 +42,7 @@ public class View {
             System.out.println("||                        Tidak ada saham                           ||");
         } else {
             for (Map.Entry<String, Integer> entry : sahamCustomer.entrySet()) {
-                System.out.printf("|| %-60s ||%n", entry.getKey() + ": " + entry.getValue() + " lembar");
+                System.out.printf("|| %-65s ||%n", entry.getKey() + ": " + entry.getValue() + " lembar");
             }
         }
         System.out.println("=======================================================================");
@@ -52,7 +52,7 @@ public class View {
             System.out.println("||                        Tidak ada SBN                             ||");
         } else {
             for (Map.Entry<String, Integer> entry : sbnCustomer.entrySet()) {
-                System.out.printf("|| %-60s ||%n", entry.getKey() + ": Rp " + entry.getValue());
+                System.out.printf("|| %-65s ||%n", entry.getKey() + ": Rp " + entry.getValue());
             }
         }
         System.out.println("=======================================================================");

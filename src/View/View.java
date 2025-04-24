@@ -64,7 +64,7 @@ public class View {
         System.out.println("||                   DAFTAR SURAT BERHARGA NEGARA                    ||");
         System.out.println("=======================================================================");
         System.out.printf("%-10s %-15s %-15s %-15s %-15s%n",
-                "Nama", "Bunga (%)", "Jangka (th)", "Jatuh Tempo", "Kuota Nasional");
+                "Nama", "Bunga (%)", "Jangka (th)", "Jatuh Tempo", "Kuota");
         System.out.println("-----------------------------------------------------------------------");
 
         for (SuratBerhargaNegara sbn : sbnList) {

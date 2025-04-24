@@ -73,6 +73,6 @@ public class Purchase {
             System.out.println("Estimasi kupon per bulan: Rp " + (int)kuponBulanan);
         } else {
             System.out.println("SBN tidak ditemukan.");
- }
-}
+        }
+    }
 }

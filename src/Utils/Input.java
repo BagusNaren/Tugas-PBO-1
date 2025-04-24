@@ -6,25 +6,55 @@ public class Input {
     private static Scanner scanner = new Scanner(System.in);
 
     public static String nextLine(String message) {
-        System.out.print(message);
-        return scanner.nextLine();
+        String input;
+        do {
+            System.out.print(message);
+            input = scanner.nextLine().trim();
+            if (input.isEmpty()) {
+                System.out.println("Input tidak boleh kosong. Silakan coba lagi.");
+            }
+        } while (input.isEmpty());
+        return input;
     }
 
     public static int nextInt(String message) {
-        System.out.print(message);
-        return Integer.parseInt(scanner.nextLine());
+        int number = 0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.print(message);
+            String input = scanner.nextLine();
+            try {
+                number = Integer.parseInt(input.trim());
+                valid = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka. Silakan coba lagi.");
+            }
+        }
+        return number;
     }
 
-    public static double nextDouble(String s) {
-        return 0;
+    public static double nextDouble(String message) {
+        double number = 0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.print(message);
+            String input = scanner.nextLine();
+            try {
+                number = Double.parseDouble(input.trim());
+                valid = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka (desimal). Silakan coba lagi.");
+            }
+        }
+        return number;
     }
 
     public static void pressEnter() {
-
+        System.out.println("Tekan Enter untuk melanjutkan...");
+        scanner.nextLine();
     }
 
     public static void waitForEnter() {
-        System.out.println("Tekan Enter untuk melanjutkan...");
-        new java.util.Scanner(System.in).nextLine();
+        pressEnter(); // optional: alias
     }
 }

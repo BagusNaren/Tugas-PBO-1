@@ -66,6 +66,9 @@ public class Admin {
                     Input.waitForEnter();
                     break;
                 case 4:
+                    hapusSemuaSaham();
+                    break;
+                case 5:
                     running = false;
                     break;
                 default:
@@ -122,6 +125,15 @@ public class Admin {
             }
         }
         Menu.pesanGagal("Saham tidak ditemukan!");
+    }
+
+    private void hapusSemuaSaham() {
+        if (sahamList.isEmpty()) {
+            Menu.pesanGagal("Daftar saham sudah kosong!");
+        } else {
+            sahamList.clear();
+            Menu.pesanSukses("Seluruh data saham berhasil dihapus!");
+        }
     }
 
     private void tambahSBN() {

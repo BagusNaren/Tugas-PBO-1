@@ -35,33 +35,33 @@ public class View {
     }
 
     public static void showPortofolio(Map<String, Integer> sahamCustomer, Map<String, Integer> sbnCustomer) {
-        System.out.println("================================================================================");
-        System.out.println("||                            PORTOFOLIO INVESTASI                            ||");
-        System.out.println("================================================================================");
+        System.out.println("=======================================================================");
+        System.out.println("||                        PORTOFOLIO INVESTASI                       ||");
+        System.out.println("=======================================================================");
 
-        System.out.println("||                                    SAHAM                                   ||");
+        System.out.println("||                             SAHAM                                 ||");
         if (sahamCustomer.isEmpty()) {
-            System.out.println("||                            Tidak ada saham                                 ||");
+            System.out.printf("|| %-65s ||%n", "Tidak ada saham");
         } else {
             for (Map.Entry<String, Integer> entry : sahamCustomer.entrySet()) {
                 String isi = entry.getKey() + ": " + entry.getValue() + " lembar";
-                System.out.printf("|| %-75s||%n", isi);
+                System.out.printf("|| %-65s ||%n", isi);
             }
         }
 
-        System.out.println("||----------------------------------------------------------------------------||");
+        System.out.println("||-------------------------------------------------------------------||");
 
-        System.out.println("||                                     SBN                                    ||");
+        System.out.println("||                              SBN                                  ||");
         if (sbnCustomer.isEmpty()) {
-            System.out.println("||                             Tidak ada SBN                                   ||");
+            System.out.printf("|| %-65s ||%n", "Tidak ada SBN");
         } else {
             for (Map.Entry<String, Integer> entry : sbnCustomer.entrySet()) {
                 String isi = entry.getKey() + ": Rp " + String.format("%,d", entry.getValue());
-                System.out.printf("|| %-75s||%n", isi);
+                System.out.printf("|| %-65s ||%n", isi);
             }
         }
 
-        System.out.println("================================================================================");
+        System.out.println("=======================================================================");
     }
 
     public static void showSbnList(List<SuratBerhargaNegara> sbnList) {

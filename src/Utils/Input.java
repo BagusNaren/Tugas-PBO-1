@@ -1,11 +1,9 @@
 package Utils;
 
-import Menu.Menu;
-
 import java.util.Scanner;
 
 public class Input {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static String nextLine(String message) throws InvalidInputException {
         System.out.print(message);

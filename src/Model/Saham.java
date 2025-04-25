@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Saham {
-    private String kode;
-    private String namaPerusahaan;
+    private final String kode;
+    private final String namaPerusahaan;
     private int harga;
 
-    private static List<Saham> daftarSaham = new ArrayList<>();
+    private static final List<Saham> daftarSaham = new ArrayList<>();
 
     public Saham(String kode, String namaPerusahaan, int harga) {
         this.kode = kode;

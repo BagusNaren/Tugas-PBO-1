@@ -44,7 +44,6 @@ public class Menu {
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
-
     }
 
     public static void loggedInGreetingCustomer(String userName) {

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Admin {
-    private static List<Saham> sahamList = new ArrayList<>();
-    private static List<SuratBerhargaNegara> sbnList = new ArrayList<>();
+    private static final List<Saham> sahamList = new ArrayList<>();
+    private static final List<SuratBerhargaNegara> sbnList = new ArrayList<>();
 
     static {
         sahamList.add(new Saham("TLKM", "Telkom Indonesia", 4000));

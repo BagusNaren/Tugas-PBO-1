@@ -1,6 +1,8 @@
 package Menu;
 
 import Model.Account;
+import Utils.Input;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -34,7 +36,7 @@ public class Menu {
         System.out.println("||               Periksa kembali Username dan Password Anda          ||");
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
-        scanner.nextLine();
+        Input.waitForEnter();
     }
 
     public static void loggedInGreetingAdmin(String userName) {
@@ -42,7 +44,8 @@ public class Menu {
         System.out.printf("||                        Halo Admin, %-31s||\n", Account.ADMIN_NAME);
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
-        scanner.nextLine();
+        Input.waitForEnter();
+
     }
 
     public static void loggedInGreetingCustomer(String userName) {
@@ -50,7 +53,7 @@ public class Menu {
         System.out.printf("||                       Halo Customer, %-29s||\n", Account.CUSTOMER_NAME);
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
-        scanner.nextLine();
+        Input.waitForEnter();
     }
 
     public static void tampilanMenuAdmin() {
@@ -167,7 +170,7 @@ public class Menu {
         cetakTengahDenganKotak(pesan);
         System.out.println("||                      Tekan Enter untuk Kembali                    ||");
         System.out.println("=======================================================================");
-        scanner.nextLine();
+        Input.waitForEnter();
     }
 
     public static void pesanSukses(String pesan) {
@@ -176,7 +179,7 @@ public class Menu {
         cetakTengahDenganKotak(pesan);
         System.out.println("||                     Tekan Enter untuk Kembali                     ||");
         System.out.println("=======================================================================");
-        scanner.nextLine();
+        Input.waitForEnter();
     }
 
     private static void cetakTengahDenganKotak(String pesan) {
@@ -193,7 +196,7 @@ public class Menu {
         System.out.println("-----------------------------------------------------------------------");
         System.out.println("||                   Tekan Enter untuk Melanjutkan                   ||");
         System.out.println("=======================================================================");
-        scanner.nextLine();
+        Input.waitForEnter();
     }
 
     public static void ucapanTerimaKasih() {

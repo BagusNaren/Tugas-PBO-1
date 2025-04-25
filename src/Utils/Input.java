@@ -13,7 +13,6 @@ public class Input {
             input = scanner.nextLine().trim();
             if (input.isEmpty()) {
                 Menu.pesanGagal("Input tidak boleh kosong. Silakan coba lagi.");
-                waitForEnter();
             }
         } while (input.isEmpty());
         return input;
@@ -30,7 +29,6 @@ public class Input {
                 valid = true;
             } catch (NumberFormatException e) {
                 Menu.pesanGagal("Input harus berupa angka. Silakan coba lagi.");
-                waitForEnter();
             }
         }
         return number;
@@ -47,13 +45,16 @@ public class Input {
                 valid = true;
             } catch (NumberFormatException e) {
                 Menu.pesanGagal("Input harus berupa angka (desimal). Silakan coba lagi.");
-                waitForEnter();
             }
         }
         return number;
     }
 
     public static void waitForEnter() {
-        Menu.tekanEnterUntukLanjut();
+        String input;
+        do {
+            System.out.print(">> Tekan Enter untuk melanjutkan...");
+            input = scanner.nextLine();
+        } while (!input.isEmpty());
     }
 }

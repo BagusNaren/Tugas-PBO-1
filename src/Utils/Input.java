@@ -53,7 +53,7 @@ public class Input {
     public static void waitForEnter() {
         String input;
         do {
-            System.out.print(">> Tekan Enter untuk melanjutkan...");
+            System.out.print(">> Tekan Enter setelah mengetik sesuatu untuk melanjutkan:...");
             input = scanner.nextLine();
         } while (!input.isEmpty());
     }

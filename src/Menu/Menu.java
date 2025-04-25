@@ -156,13 +156,6 @@ public class Menu {
         System.out.println("=======================================================================");
     }
 
-    public static void lihatPortofolio() {
-        System.out.println("=======================================================================");
-        System.out.println("||                      PORTOFOLIO INVESTASI                         ||");
-        System.out.println("||      Menampilkan Portofolio Saham & SBN yang Dimiliki Customer    ||");
-        System.out.println("=======================================================================");
-    }
-
     public static void pesanGagal(String pesan) {
         System.out.println("=======================================================================");
         System.out.println("||                               GAGAL                               ||");

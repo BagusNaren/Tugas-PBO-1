@@ -3,6 +3,7 @@ import Controller.Admin;
 import Controller.Customer;
 import Utils.Clear;
 import Utils.Input;
+import Utils.InvalidInputException;
 import Menu.Menu;
 
 public class Main {
@@ -13,23 +14,27 @@ public class Main {
             Clear.clearScreen();
             Menu.tampilanLogin();
 
-            int pilihan = Input.nextInt("");
+            try {
+                int pilihan = Input.nextInt("");
 
-            switch (pilihan) {
-                case 1:
-                    prosesLogin("admin");
-                    break;
-                case 2:
-                    prosesLogin("customer");
-                    break;
-                case 0:
-                    running = false;
-                    Clear.clearScreen();
-                    Menu.ucapanTerimaKasih();
-                    break;
-                default:
-                    Menu.pesanGagal("Pilihan tidak valid");
-                    break;
+                switch (pilihan) {
+                    case 1:
+                        prosesLogin("admin");
+                        break;
+                    case 2:
+                        prosesLogin("customer");
+                        break;
+                    case 0:
+                        running = false;
+                        Clear.clearScreen();
+                        Menu.ucapanTerimaKasih();
+                        break;
+                    default:
+                        Menu.pesanGagal("Pilihan tidak valid");
+                        break;
+                }
+            } catch (InvalidInputException e) {
+                Menu.pesanGagal(e.getMessage());
             }
         }
     }
@@ -38,21 +43,25 @@ public class Main {
         Clear.clearScreen();
         Menu.headerUsernameDanPassword();
 
-        String username = Input.nextLine("Username: ");
-        String password = Input.nextLine("Password: ");
+        try {
+            String username = Input.nextLine("Username: ");
+            String password = Input.nextLine("Password: ");
 
-        String role = Login.login(username, password);
+            String role = Login.login(username, password);
 
-        if (role.equals(expectedRole)) {
-            if (role.equals("admin")) {
-                Menu.loggedInGreetingAdmin(username);
-                new Admin().menu();
+            if (role.equals(expectedRole)) {
+                if (role.equals("admin")) {
+                    Menu.loggedInGreetingAdmin(username);
+                    new Admin().menu();
+                } else {
+                    Menu.loggedInGreetingCustomer(username);
+                    new Customer().menu();
+                }
             } else {
-                Menu.loggedInGreetingCustomer(username);
-                new Customer().menu();
+                Menu.errorLogin();
             }
-        } else {
-            Menu.errorLogin();
+        } catch (InvalidInputException e) {
+            Menu.pesanGagal(e.getMessage());
         }
     }
 }

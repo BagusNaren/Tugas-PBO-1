@@ -1,7 +1,6 @@
 package Menu;
 
 import Model.Account;
-import Utils.Input;
 
 import java.util.Scanner;
 
@@ -15,7 +14,7 @@ public class Menu {
         System.out.println("||                                                                   ||");
         System.out.println("||                              LOGIN PAGE                           ||");
         System.out.println("-----------------------------------------------------------------------");
-        System.out.println("||                       Pilih Tipe User Di Bawah                    ||");
+        System.out.println("||                      Pilih Tipe User Di Bawah                     ||");
         System.out.println("||                                                                   ||");
         System.out.println("||          [1] Administrator                  [2] Customer          ||");
         System.out.println("||                           [0] Keluar Program                      ||");
@@ -36,7 +35,7 @@ public class Menu {
         System.out.println("||               Periksa kembali Username dan Password Anda          ||");
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
-        Input.waitForEnter();
+        scanner.nextLine();
     }
 
     public static void loggedInGreetingAdmin(String userName) {
@@ -44,7 +43,7 @@ public class Menu {
         System.out.printf("||                        Halo Admin, %-31s||\n", Account.ADMIN_NAME);
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
-        Input.waitForEnter();
+        scanner.nextLine();
 
     }
 
@@ -53,7 +52,7 @@ public class Menu {
         System.out.printf("||                       Halo Customer, %-29s||\n", Account.CUSTOMER_NAME);
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
         System.out.println("=======================================================================");
-        Input.waitForEnter();
+        scanner.nextLine();
     }
 
     public static void tampilanMenuAdmin() {
@@ -170,7 +169,7 @@ public class Menu {
         cetakTengahDenganKotak(pesan);
         System.out.println("||                      Tekan Enter untuk Kembali                    ||");
         System.out.println("=======================================================================");
-        Input.waitForEnter();
+        scanner.nextLine();
     }
 
     public static void pesanSukses(String pesan) {
@@ -179,7 +178,7 @@ public class Menu {
         cetakTengahDenganKotak(pesan);
         System.out.println("||                     Tekan Enter untuk Kembali                     ||");
         System.out.println("=======================================================================");
-        Input.waitForEnter();
+        scanner.nextLine();
     }
 
     private static void cetakTengahDenganKotak(String pesan) {
@@ -196,7 +195,7 @@ public class Menu {
         System.out.println("-----------------------------------------------------------------------");
         System.out.println("||                   Tekan Enter untuk Melanjutkan                   ||");
         System.out.println("=======================================================================");
-        Input.waitForEnter();
+        scanner.nextLine();
     }
 
     public static void ucapanTerimaKasih() {

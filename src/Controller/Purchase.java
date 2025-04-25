@@ -46,14 +46,38 @@ public class Purchase {
             return;
         }
 
+        List<Saham> sahamList = Admin.getSahamList();
+
         System.out.println("=======================================================================");
         System.out.println("||                        SAHAM YANG DIMILIKI                        ||");
         System.out.println("=======================================================================");
-        System.out.printf("|| %-15s | %-47s ||%n", "Kode Saham", "Jumlah Lembar");
-        System.out.println("----------------------------------------------------------------------");
-        for (String kode : sahamCustomer.keySet()) {
-            System.out.printf("|| %-15s | %-47s ||%n", kode, sahamCustomer.get(kode) + " lembar");
+        System.out.printf("|| %-10s | %-10s | %-18s | %-18s ||%n", "Kode", "Lembar", "Total Beli", "Nilai Pasar");
+        System.out.println("-----------------------------------------------------------------------");
+
+        for (Map.Entry<String, Integer> entry : sahamCustomer.entrySet()) {
+            String kode = entry.getKey();
+            int jumlahLembar = entry.getValue();
+
+            Saham saham = sahamList.stream()
+                    .filter(s -> s.getKode().equalsIgnoreCase(kode))
+                    .findFirst()
+                    .orElse(null);
+
+            if (saham != null) {
+                int harga = saham.getHarga();
+                int totalBeli = jumlahLembar * harga;
+                int nilaiPasar = jumlahLembar * harga;
+
+                System.out.printf("|| %-10s | %-10d | Rp %-15s | Rp %-15s ||%n",
+                        kode, jumlahLembar,
+                        String.format("%,d", totalBeli),
+                        String.format("%,d", nilaiPasar));
+            } else {
+                System.out.printf("|| %-10s | %-10d | %-18s | %-18s ||%n",
+                        kode, jumlahLembar, "Data tidak ada", "Data tidak ada");
+            }
         }
+
         System.out.println("=======================================================================");
 
         String kode = Input.nextLine("Masukkan kode saham: ");

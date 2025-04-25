@@ -38,7 +38,7 @@ public class Menu {
         scanner.nextLine();
     }
 
-    public static void loggedInGreetingAdmin(String userName) {
+    public static void loggedInGreetingAdmin() {
         System.out.println("=======================================================================");
         System.out.printf("||                        Halo Admin, %-31s||\n", Account.ADMIN_NAME);
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
@@ -46,7 +46,7 @@ public class Menu {
         scanner.nextLine();
     }
 
-    public static void loggedInGreetingCustomer(String userName) {
+    public static void loggedInGreetingCustomer() {
         System.out.println("=======================================================================");
         System.out.printf("||                       Halo Customer, %-29s||\n", Account.CUSTOMER_NAME);
         System.out.println("||                    Tekan Enter untuk Melanjutkan                  ||");
@@ -200,7 +200,7 @@ public class Menu {
     public static void ucapanTerimaKasih() {
         System.out.println("=======================================================================");
         System.out.println("||                    TERIMA KASIH TELAH MENGGUNAKAN                 ||");
-        System.out.println("||                        APLIKASI INVESTASI KAMI!                   ||");
+        System.out.println("||                           APLIKASI GOINVEST!                      ||");
         System.out.println("=======================================================================");
     }
 }

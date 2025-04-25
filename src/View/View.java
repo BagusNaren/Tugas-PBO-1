@@ -37,7 +37,7 @@ public class View {
     public static void showPortofolio(Map<String, Integer> sahamCustomer, Map<String, Integer> sbnCustomer,
                                       List<Saham> listSaham, List<SuratBerhargaNegara> listSbn) {
         System.out.println("=======================================================================");
-        System.out.println("||                        SAHAM YANG DIMILIKI                        ||");
+        System.out.println("||                               SAHAM                               ||");
         System.out.println("=======================================================================");
         System.out.printf("|| %-10s | %-10s | %-18s | %-18s ||%n", "Kode", "Lembar", "Total Beli", "Nilai Pasar");
         System.out.println("-----------------------------------------------------------------------");

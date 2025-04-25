@@ -51,10 +51,10 @@ public class Main {
 
             if (role.equals(expectedRole)) {
                 if (role.equals("admin")) {
-                    Menu.loggedInGreetingAdmin(username);
+                    Menu.loggedInGreetingAdmin();
                     new Admin().menu();
                 } else {
-                    Menu.loggedInGreetingCustomer(username);
+                    Menu.loggedInGreetingCustomer();
                     new Customer().menu();
                 }
             } else {

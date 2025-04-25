@@ -45,15 +45,15 @@ public class Customer {
                     case 5:
                         Menu.lihatPortofolio();
                         View.showPortofolio(sahamCustomer, sbnCustomer, Admin.getSahamList(), Admin.getSbnList());
-                        Menu.tekanEnterUntukLanjut();
+                        Menu.tekanEnterUntukKembali();
                         break;
                     case 6:
                         View.showSahamList(Admin.getSahamList());
-                        Menu.tekanEnterUntukLanjut();
+                        Menu.tekanEnterUntukKembali();
                         break;
                     case 7:
                         View.showSbnList(Admin.getSbnList());
-                        Menu.tekanEnterUntukLanjut();
+                        Menu.tekanEnterUntukKembali();
                         break;
                     case 8:
                         running = false;

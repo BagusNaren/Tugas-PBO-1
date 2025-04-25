@@ -190,9 +190,9 @@ public class Menu {
         System.out.printf("||%" + paddingKiri + "s%s%" + paddingKanan + "s||\n", "", pesan, "");
     }
 
-    public static void tekanEnterUntukLanjut() {
+    public static void tekanEnterUntukKembali() {
         System.out.println("-----------------------------------------------------------------------");
-        System.out.println("||                   Tekan Enter untuk Melanjutkan                   ||");
+        System.out.println("||                      Tekan Enter untuk Kembali                    ||");
         System.out.println("=======================================================================");
         scanner.nextLine();
     }

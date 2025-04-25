@@ -149,6 +149,6 @@ public class Purchase {
         } else {
             Menu.pesanGagal("SBN tidak ditemukan");
         }
-        Menu.tekanEnterUntukLanjut();
+        Menu.tekanEnterUntukKembali();
     }
 }

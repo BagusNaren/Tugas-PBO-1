@@ -36,11 +36,12 @@ public class View {
 
     public static void showPortofolio(Map<String, Integer> sahamCustomer, Map<String, Integer> sbnCustomer,
                                       List<Saham> listSaham, List<SuratBerhargaNegara> listSbn) {
-        System.out.println("=========================================================================");
-        System.out.println("||                          PORTOFOLIO INVESTASI                       ||");
-        System.out.println("=========================================================================");
+        System.out.println("=======================================================================");
+        System.out.println("||                        SAHAM YANG DIMILIKI                        ||");
+        System.out.println("=======================================================================");
+        System.out.printf("|| %-10s | %-10s | %-18s | %-18s ||%n", "Kode", "Lembar", "Total Beli", "Nilai Pasar");
+        System.out.println("-----------------------------------------------------------------------");
 
-        System.out.println("||                               SAHAM                                 ||");
         if (sahamCustomer.isEmpty()) {
             System.out.printf("|| %-65s ||%n", "Tidak ada saham");
         } else {
@@ -53,24 +54,30 @@ public class View {
                         .findFirst().orElse(null);
 
                 if (saham != null) {
-                    int hargaSekarang = saham.getHarga();
-                    int totalNominalBeli = jumlahLembar * hargaSekarang;
+                    int harga = saham.getHarga();
+                    int totalBeli = jumlahLembar * harga;
+                    int nilaiPasar = jumlahLembar * harga;
 
-                    String info = String.format("%s: %d lembar | Total Beli: Rp %,d | Nilai Pasar: Rp %,d",
-                            kode, jumlahLembar, totalNominalBeli, jumlahLembar * hargaSekarang);
-                    System.out.printf("|| %-67s ||%n", info);
+                    System.out.printf("|| %-10s | %-10d | Rp %-15s | Rp %-15s ||%n",
+                            kode, jumlahLembar,
+                            String.format("%,d", totalBeli),
+                            String.format("%,d", nilaiPasar));
                 } else {
-                    String info = String.format("%s: %d lembar (data saham tidak ditemukan)", kode, jumlahLembar);
-                    System.out.printf("|| %-67s ||%n", info);
+                    System.out.printf("|| %-10s | %-10d | %-18s | %-18s ||%n",
+                            kode, jumlahLembar, "Data tidak ada", "Data tidak ada");
                 }
             }
         }
+        System.out.println("=======================================================================");
 
-        System.out.println("||---------------------------------------------------------------------||");
+        System.out.println("=======================================================================");
+        System.out.println("||                     SURAT BERHARGA NEGARA (SBN)                   ||");
+        System.out.println("=======================================================================");
+        System.out.printf("|| %-17s | %-21s | %-21s ||%n", "Nama SBN", "Total Beli", "Bunga / Bulan");
+        System.out.println("-----------------------------------------------------------------------");
 
-        System.out.println("||                                SBN                                  ||");
         if (sbnCustomer.isEmpty()) {
-            System.out.printf("|| %-67s ||%n", "Tidak ada SBN");
+            System.out.printf("|| %-65s ||%n", "Tidak ada SBN");
         } else {
             for (Map.Entry<String, Integer> entry : sbnCustomer.entrySet()) {
                 String nama = entry.getKey();
@@ -82,16 +89,18 @@ public class View {
 
                 if (sbn != null) {
                     double bungaBulanan = (nominal * (sbn.getBunga() / 100)) / 12;
-                    String info = String.format("%s: Rp %,d | Bunga/Bulan: Rp %,.2f", nama, nominal, bungaBulanan);
-                    System.out.printf("|| %-67s ||%n", info);
+                    System.out.printf("|| %-17s | Rp %-18s | Rp %-18.2f ||%n",
+                            nama,
+                            String.format("%,d", nominal),
+                            bungaBulanan);
                 } else {
-                    String info = String.format("%s: Rp %,d (data SBN tidak ditemukan)", nama, nominal);
-                    System.out.printf("|| %-67s ||%n", info);
+                    System.out.printf("|| %-25s | %-18s | %-18s ||%n",
+                            nama, "Data tidak ada", "Data tidak ada");
                 }
             }
         }
 
-        System.out.println("=========================================================================");
+        System.out.println("=======================================================================");
     }
 
     public static void showSbnList(List<SuratBerhargaNegara> sbnList) {

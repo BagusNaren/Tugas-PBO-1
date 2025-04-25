@@ -43,6 +43,7 @@ public class Customer {
                         Purchase.simulasiSBN();
                         break;
                     case 5:
+                        Menu.lihatPortofolio();
                         View.showPortofolio(sahamCustomer, sbnCustomer, Admin.getSahamList(), Admin.getSbnList());
                         Menu.tekanEnterUntukLanjut();
                         break;

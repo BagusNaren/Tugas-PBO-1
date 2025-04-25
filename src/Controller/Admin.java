@@ -93,6 +93,9 @@ public class Admin {
                     Input.waitForEnter();
                     break;
                 case 3:
+                    hapusSemuaSBN();
+                    break;
+                case 4:
                     running = false;
                     break;
                 default:
@@ -147,6 +150,15 @@ public class Admin {
         Menu.pesanSukses("SBN berhasil ditambahkan!");
         View.showSbnList(sbnList);
         Input.waitForEnter();
+    }
+
+    private void hapusSemuaSBN() {
+        if (sbnList.isEmpty()) {
+            Menu.pesanGagal("Daftar SBN sudah kosong!");
+        } else {
+            sbnList.clear();
+            Menu.pesanSukses("Seluruh data SBN berhasil dihapus!");
+        }
     }
 
     public static List<Saham> getSahamList() {

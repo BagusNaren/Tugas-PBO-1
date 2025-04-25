@@ -44,15 +44,15 @@ public class Customer {
                         break;
                     case 5:
                         View.showPortofolio(sahamCustomer, sbnCustomer);
-                        Input.waitForEnter();
+                        Menu.tekanEnterUntukLanjut();
                         break;
                     case 6:
                         View.showSahamList(Admin.getSahamList());
-                        Input.waitForEnter();
+                        Menu.tekanEnterUntukLanjut();
                         break;
                     case 7:
                         View.showSbnList(Admin.getSbnList());
-                        Input.waitForEnter();
+                        Menu.tekanEnterUntukLanjut();
                         break;
                     case 8:
                         running = false;

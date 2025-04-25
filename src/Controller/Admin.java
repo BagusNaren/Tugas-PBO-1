@@ -69,7 +69,7 @@ public class Admin {
                         break;
                     case 3:
                         View.showSahamList(sahamList);
-                        Input.waitForEnter();
+                        Menu.tekanEnterUntukLanjut();
                         break;
                     case 4:
                         hapusSemuaSaham();
@@ -100,7 +100,7 @@ public class Admin {
                         break;
                     case 2:
                         View.showSbnList(sbnList);
-                        Input.waitForEnter();
+                        Menu.tekanEnterUntukLanjut();
                         break;
                     case 3:
                         hapusSemuaSBN();
@@ -127,7 +127,7 @@ public class Admin {
             sahamList.add(new Saham(kode, nama, harga));
             Menu.pesanSukses("Saham berhasil ditambahkan!");
             View.showSahamList(sahamList);
-            Input.waitForEnter();
+            Menu.tekanEnterUntukLanjut();
         } catch (InvalidInputException e) {
             Menu.pesanGagal(e.getMessage());
         }
@@ -174,7 +174,7 @@ public class Admin {
             sbnList.add(new SuratBerhargaNegara(nama, bunga, jangka, jatuhTempo, kuota));
             Menu.pesanSukses("SBN berhasil ditambahkan!");
             View.showSbnList(sbnList);
-            Input.waitForEnter();
+            Menu.tekanEnterUntukLanjut();
         } catch (InvalidInputException e) {
             Menu.pesanGagal(e.getMessage());
         }

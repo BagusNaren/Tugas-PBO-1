@@ -1,5 +1,7 @@
 package Utils;
 
+import Menu.Menu;
+
 import java.util.Scanner;
 
 public class Input {
@@ -32,10 +34,5 @@ public class Input {
         } catch (NumberFormatException e) {
             throw new InvalidInputException("Input harus berupa angka (desimal)");
         }
-    }
-
-    public static void waitForEnter() {
-        System.out.print(">> Tekan Enter untuk melanjutkan...");
-        scanner.nextLine();
     }
 }

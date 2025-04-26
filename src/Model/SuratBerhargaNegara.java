@@ -21,5 +21,4 @@ public class SuratBerhargaNegara {
     public String getTanggalJatuhTempo() { return tanggalJatuhTempo; }
     public int getKuotaNasional() { return quotaNational; }
     public void kurangiKuota(int nominal) { this.quotaNational -= nominal; }
-
 }

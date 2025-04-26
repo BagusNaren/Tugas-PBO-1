@@ -9,7 +9,6 @@ public class Saham {
         this.kode = kode;
         this.namaPerusahaan = namaPerusahaan;
         this.harga = harga;
-
     }
 
     public String getKode() { return kode; }

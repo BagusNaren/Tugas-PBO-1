@@ -12,9 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Admin {
+    // List untuk menyimpan data Saham dan SBN
     private static final List<Saham> sahamList = new ArrayList<>();
     private static final List<SuratBerhargaNegara> sbnList = new ArrayList<>();
 
+    // Inisialisasi data awal Saham dan SBN
     static {
         sahamList.add(new Saham("TLKM", "Telkom Indonesia", 4000));
         sahamList.add(new Saham("BBCA", "Bank Central Asia", 8500));
@@ -25,6 +27,7 @@ public class Admin {
         sbnList.add(new SuratBerhargaNegara("ST", 5.5, 2, "2027-05-01", 600000000));
     }
 
+    // Menu utama admin
     public void menu() {
         boolean running = true;
         while (running) {
@@ -52,6 +55,7 @@ public class Admin {
         }
     }
 
+    // Menu pengelolaan saham
     private void menuSaham() {
         boolean running = true;
         while (running) {
@@ -86,6 +90,7 @@ public class Admin {
         }
     }
 
+    // Menu pengelolaan Surat Berharga Negara (SBN)
     private void menuSBN() {
         boolean running = true;
         while (running) {
@@ -117,6 +122,7 @@ public class Admin {
         }
     }
 
+    // Method untuk menambah data saham
     private void tambahSaham() {
         try {
             Menu.inputTambahSaham();
@@ -133,6 +139,7 @@ public class Admin {
         }
     }
 
+    // Method untuk mengubah harga saham yang sudah ada
     private void ubahHargaSaham() {
         try {
             Menu.inputUbahHargaSaham();
@@ -153,6 +160,7 @@ public class Admin {
         }
     }
 
+    // Method untuk menghapus semua saham
     private void hapusSemuaSaham() {
         if (sahamList.isEmpty()) {
             Menu.pesanGagal("Daftar saham sudah kosong!");
@@ -162,6 +170,7 @@ public class Admin {
         }
     }
 
+    // Method untuk menambah data SBN
     private void tambahSBN() {
         try {
             Menu.inputTambahSBN();
@@ -180,6 +189,7 @@ public class Admin {
         }
     }
 
+    // Method untuk menghapus semua SBN
     private void hapusSemuaSBN() {
         if (sbnList.isEmpty()) {
             Menu.pesanGagal("Daftar SBN sudah kosong!");
@@ -189,10 +199,12 @@ public class Admin {
         }
     }
 
+    // Getter untuk mengambil daftar saham
     public static List<Saham> getSahamList() {
         return sahamList;
     }
 
+    // Getter untuk mengambil daftar SBN
     public static List<SuratBerhargaNegara> getSbnList() {
         return sbnList;
     }

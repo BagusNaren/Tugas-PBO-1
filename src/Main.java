@@ -8,21 +8,21 @@ import Menu.Menu;
 
 public class Main {
     public static void main(String[] args) {
-        boolean running = true;
+        boolean running = true; // Variabel untuk mengontrol perulangan aplikasi
 
-        while (running) {
+        while (running) { // Selama 'running' true, program akan terus berjalan
             Clear.clearScreen();
             Menu.tampilanLogin();
 
             try {
-                int pilihan = Input.nextInt("");
+                int pilihan = Input.nextInt(""); // Menerima input pilihan dari user
 
-                switch (pilihan) {
+                switch (pilihan) { // Menentukan aksi berdasarkan input user
                     case 1:
-                        prosesLogin("admin");
+                        prosesLogin("admin"); // Proses login untuk Admin
                         break;
                     case 2:
-                        prosesLogin("customer");
+                        prosesLogin("customer"); // Proses login untuk Customer
                         break;
                     case 0:
                         running = false;
@@ -39,6 +39,7 @@ public class Main {
         }
     }
 
+    // Method untuk memproses login berdasarkan role yang diharapkan (admin atau customer)
     private static void prosesLogin(String expectedRole) {
         Clear.clearScreen();
         Menu.headerUsernameDanPassword();

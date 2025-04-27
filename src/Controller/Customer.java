@@ -10,9 +10,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Customer {
+    // Menyimpan data saham yang dimiliki customer (kode saham -> jumlah lembar)
     private static final Map<String, Integer> sahamCustomer = new HashMap<>();
+    // Menyimpan data SBN yang dimiliki customer (nama SBN -> nominal investasi)
     private static final Map<String, Integer> sbnCustomer = new HashMap<>();
 
+    // Menu utama customer
     public void menu() {
         boolean running = true;
         while (running) {
@@ -21,10 +24,12 @@ public class Customer {
                 Menu.customerMenu();
                 int pilihan = Input.nextInt("");
 
+                // Validasi pilihan menu
                 if (pilihan < 1 || pilihan > 8) {
                     throw new InvalidInputException("Pilihan tidak valid");
                 }
 
+                // Aksi berdasarkan pilihan
                 switch (pilihan) {
                     case 1:
                         Menu.beliSaham();

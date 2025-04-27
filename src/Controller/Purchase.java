@@ -11,12 +11,14 @@ import java.util.List;
 import java.util.Map;
 
 public class Purchase {
+    // Method untuk membeli saham
     public static void buyStock(Map<String, Integer> sahamCustomer) throws InvalidInputException {
         List<Saham> sahamList = Admin.getSahamList();
         View.showSahamList(sahamList);
         String kode = Input.nextLine("Masukkan kode saham: ");
         boolean ditemukan = false;
 
+        // Cek apakah saham dengan kode tersebut tersedia
         for (Saham s : sahamList) {
             if (s.getKode().equalsIgnoreCase(kode)) {
                 ditemukan = true;
@@ -36,18 +38,22 @@ public class Purchase {
             throw new InvalidInputException("Input jumlah lembar tidak valid");
         }
 
+        // Tambahkan saham ke portofolio customer
         sahamCustomer.put(kode, sahamCustomer.getOrDefault(kode, 0) + jumlah);
         Menu.pesanSukses("Berhasil membeli saham!");
     }
 
+    // Method untuk menjual saham
     public static void sellStock(Map<String, Integer> sahamCustomer) throws InvalidInputException {
+        // Cek apakah customer memiliki saham
         if (sahamCustomer.isEmpty()) {
             Menu.pesanGagal("Tidak ada saham yang dimiliki");
             return;
         }
 
-        List<Saham> sahamList = Admin.getSahamList();
+        List<Saham> sahamList = Admin.getSahamList(); // Ambil daftar saham
 
+        // Tampilkan daftar saham yang dimiliki customer
         System.out.println("=======================================================================");
         System.out.println("||                        SAHAM YANG DIMILIKI                        ||");
         System.out.println("=======================================================================");
@@ -58,6 +64,7 @@ public class Purchase {
             String kode = entry.getKey();
             int jumlahLembar = entry.getValue();
 
+            // Cari informasi saham berdasarkan kode
             Saham saham = sahamList.stream()
                     .filter(s -> s.getKode().equalsIgnoreCase(kode))
                     .findFirst()
@@ -73,6 +80,7 @@ public class Purchase {
                         String.format("%,d", totalBeli),
                         String.format("%,d", nilaiPasar));
             } else {
+                // Jika data saham tidak ditemukan
                 System.out.printf("|| %-10s | %-10d | %-18s | %-18s ||%n",
                         kode, jumlahLembar, "Data tidak ada", "Data tidak ada");
             }
@@ -80,6 +88,7 @@ public class Purchase {
 
         System.out.println("=======================================================================");
 
+        // Input kode saham dan jumlah lembar yang ingin dijual
         String kode = Input.nextLine("Masukkan kode saham: ");
         int jumlah;
         try {
@@ -88,6 +97,7 @@ public class Purchase {
             throw new InvalidInputException("Input jumlah lembar tidak valid");
         }
 
+        // Proses penjualan saham
         if (sahamCustomer.getOrDefault(kode, 0) >= jumlah) {
             sahamCustomer.put(kode, sahamCustomer.get(kode) - jumlah);
             if (sahamCustomer.get(kode) == 0) sahamCustomer.remove(kode);
@@ -97,6 +107,7 @@ public class Purchase {
         }
     }
 
+    // Method untuk membeli Surat Berharga Negara (SBN)
     public static void buySBN(Map<String, Integer> sbnCustomer) throws InvalidInputException {
         List<SuratBerhargaNegara> sbnList = Admin.getSbnList();
         View.showSBNList(sbnList);
@@ -109,6 +120,7 @@ public class Purchase {
             throw new InvalidInputException("Input nominal tidak valid");
         }
 
+        // Cari dan proses pembelian SBN
         for (SuratBerhargaNegara sbn : sbnList) {
             if (sbn.getNama().equalsIgnoreCase(nama)) {
                 if (sbn.getKuotaNasional() >= nominal) {
@@ -125,6 +137,7 @@ public class Purchase {
         Menu.pesanGagal("SBN tidak ditemukan");
     }
 
+    // Method untuk simulasi kupon bulanan SBN
     public static void simulasiSBN() throws InvalidInputException {
         String nama = Input.nextLine("Masukkan nama SBN: ");
         int nominal;
@@ -144,6 +157,7 @@ public class Purchase {
         }
 
         if (bunga > 0) {
+            // Hitung estimasi kupon bulanan (dengan asumsi pajak 10%)
             double kuponBulanan = bunga / 12 / 100 * 0.9 * nominal;
             System.out.println("Estimasi kupon per bulan: Rp " + (int)kuponBulanan);
         } else {

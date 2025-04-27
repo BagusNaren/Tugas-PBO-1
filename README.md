@@ -23,3 +23,8 @@ Di bawah ini akan dijelaskan fitur utama, cara kerja program, serta struktur kel
 * Nama  : Anak Agung Ngurah Bramanda Maha Saputra  
   NIM   : 2405551018  
   Mata Kuliah: PBO (E)
+
+---
+
+# UML
+![UML_Program Investasi Saham dan SBN](https://github.com/user-attachments/assets/cdebc7f0-4613-4d63-a9aa-29bad1df4ddd)

@@ -2,7 +2,7 @@
 
 # Program Investasi Saham dan Surat Berharga Negara (SBN)
 
-Halo! Ini adalah proyek kecil kami untuk mengembangkan aplikasi investasi sederhana, dibuat untuk memenuhi Tugas 1 Mata Kuliah Pemrograman Berorientasi Objek (PBO).
+Halo! Ini adalah proyek kecil kami untuk mengembangkan aplikasi investasi sederhana bernama GoInvest, yang dibuat untuk memenuhi Tugas 1 Mata Kuliah Pemrograman Berorientasi Objek (PBO).
 
 Program berbasis Java ini dirancang untuk mendukung dua tipe pengguna, dengan hak akses berbeda:
 1. **Admin** diberi kemampuan untuk mengelola daftar produk investasi, seperti menambah, melihat, dan menghapus produk saham dan SBN.
@@ -37,7 +37,7 @@ Di bawah ini akan dijelaskan fitur utama, cara kerja program, struktur kelas yan
   - Atribut:
     - `kode` (String)
     - `namaPerusahaan` (String)
-    - `harga` (double)
+    - `harga` (int)
 
 - **SuratBerhargaNegara**
   - Atribut:
@@ -45,7 +45,7 @@ Di bawah ini akan dijelaskan fitur utama, cara kerja program, struktur kelas yan
     - `bunga` (double)
     - `jangkaWaktu` (int)
     - `tanggalJatuhTempo` (String)
-    - `kuotaNasional` (double)
+    - `kuotaNasional` (int)
 
 - **Admin**
   - Bertugas mengelola produk investasi.
@@ -60,7 +60,7 @@ Di bawah ini akan dijelaskan fitur utama, cara kerja program, struktur kelas yan
 1. Program pertama-tama meminta pengguna untuk login.
 2. Setelah login berhasil:
    - **Admin** dapat masuk ke menu kelola saham dan kelola SBN.
-   - **Customer** bisa memilih untuk beli saham, jual saham, beli SBN, simulasi kupon SBN, atau melihat portofolio.
+   - **Customer** bisa memilih untuk beli saham, jual saham, beli SBN, simulasi kupon SBN, melihat portofolio, melihat daftar saham, atau melihat daftar SBN yang tersedia.
 3. **Investasi Saham**:
    - Customer melihat daftar saham.
    - Memilih saham yang ingin dibeli.

@@ -45,6 +45,7 @@ public class Customer {
                         break;
                     case 4:
                         Menu.simulasiSBN();
+                        View.showSbnList(Admin.getSbnList());
                         Purchase.simulasiSBN();
                         break;
                     case 5:

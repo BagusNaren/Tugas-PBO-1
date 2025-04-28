@@ -112,3 +112,45 @@ Di bawah ini merupakan penggunaan dan fitur-fitur dari Program Investasi Saham d
 ![Login User   Admin_5](https://github.com/user-attachments/assets/097b477c-2f87-4ddd-a0a1-44afa39e6056)
 ![Login User   Admin_6](https://github.com/user-attachments/assets/c93d4684-219c-4be5-b5f5-056cb4501c5c)
 Setelah user memilih untuk melakukan login sebagai siapa, user akan  diminta login dengan username dan password mereka (yang di-hardcode dalam program). Jika login berhasil, maka user akan diarahkan ke menu sesuai role mereka. Jika login gagal, maka akan muncul pesan error untuk memberikan user dan password yang benar, lalu user akan kembali diminta untuk memilih login sebagai siapa, seperti gambar di atas.
+
+### Menu Administrator
+![Menu Admin_1](https://github.com/user-attachments/assets/87ec80ee-9f73-468c-ab2b-0727d19b8519)
+![Menu Admin_2](https://github.com/user-attachments/assets/d5a2c0ae-a499-42bd-b44d-a3d9a4883661)
+![Menu Admin_3](https://github.com/user-attachments/assets/4f725c8e-82de-4b5c-927e-01dc372fb0d5)
+Setelah melakukan login sebagai administrator, user akan diberikan instruksi pada menu utama administrator seperti pada gambar di atas. Di menu ini, admin dapat memilih untuk mengelola data saham, mengelola data surat berharga negara (SBN), atau melakukan logout dari sistem dengan menginputkan angka sesuai dengan pilihan yang tersedia.
+
+Jika admin memilih untuk **mengelola saham**, maka akan diarahkan ke submenu **Kelola Saham - Admin** seperti pada gambar berikutnya. Pada submenu ini, admin dapat melakukan beberapa aksi penting seperti:
+ - Menambah saham baru ke dalam daftar,
+ - Mengubah harga saham yang sudah ada,
+ - Melihat daftar seluruh saham yang tersedia,
+ - Menghapus saham dari daftar,
+ - Atau kembali ke menu utama administrator.
+
+Jika admin memilih untuk **mengelola surat berharga negara (SBN)**, maka akan diarahkan ke submenu **Kelola SBN - Admin**. Pada submenu ini, admin dapat:
+ - Menambahkan SBN baru,
+ - Melihat daftar seluruh SBN yang tersedia,
+ - Menghapus SBN dari daftar,
+ - Atau kembali ke menu utama administrator.
+
+### Menu Customer
+![Menu Customer](https://github.com/user-attachments/assets/e9b02a6d-a2db-470f-99df-14e7dd062da8)
+Setelah melakukan login sebagai customer, user akan diberikan instruksi kembali pada menu utama customer seperti pada gambar berikut. Pada menu ini, customer akan diminta untuk memilih opsi dengan menginputkan angka sesuai dengan pilihan yang tersedia. Fitur-fitur yang dapat dilakukan oleh customer, yaitu:
+ - Customer dapat membeli saham dari daftar saham yang tersedia di sistem.
+ - Customer dapat menjual saham yang telah dimiliki dalam portofolionya.
+ - Customer dapat membeli Surat Berharga Negara (SBN) yang tersedia.
+ - Customer dapat melakukan simulasi bunga untuk menghitung potensi keuntungan dari investasi di SBN.
+ - Customer dapat melihat seluruh portofolio investasinya, baik saham maupun SBN yang sudah dibeli.
+ - Customer dapat melihat semua daftar saham yang tersedia di sistem.
+ - Customer dapat melihat semua daftar Surat Berharga Negara (SBN) yang tersedia.
+ - Customer dapat keluar dari akun dan kembali ke halaman login utama.
+
+### Lihat Daftar Saham dan SBN
+Pada sistem ini, baik administrator maupun customer dapat melihat daftar saham dan daftar Surat Berharga Negara (SBN) yang tersedia.
+![Lihat Daftar Saham](https://github.com/user-attachments/assets/1388ac07-e122-46c0-b87c-481e1c0569f2)
+Pada tampilan ini, sistem akan menampilkan seluruh saham yang tersedia dalam format tabel. Informasi yang ditampilkan mencakup kode saham, nama perusahaan, dan harga saham.
+Pengguna dapat membaca daftar saham ini untuk memilih saham mana yang akan dibeli atau diubah (khusus admin).
+
+![Lihat Daftar SBN](https://github.com/user-attachments/assets/33f451a7-7f10-4751-afd8-210c21282c03)
+Pada bagian daftar SBN, sistem akan menampilkan seluruh Surat Berharga Negara yang tersedia. Informasi yang diberikan meliputi nama SBN, persentase bunga tahunan, jangka waktu dalam tahun, tanggal jatuh tempo, dan kuota nasional.
+
+Maka dengan melihat daftar ini, customer dapat mempertimbangkan untuk membeli saham atau SBN yang diinginkan, sedangkan admin dapat mengelola data saham atau SBN yang telah terdaftar di sistem.

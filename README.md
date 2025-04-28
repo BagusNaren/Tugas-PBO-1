@@ -202,3 +202,48 @@ Pada submenu **Kelola Saham - Admin** atau **Kelola SBN - Admin**, admin memilik
    ```
    Daftar SBN sudah kosong!
    ```
+
+## Beli Saham dan SBN
+![Beli Saham dan SBN_1](https://github.com/user-attachments/assets/eb77bd74-9374-4de9-9b4d-ede304599f44)
+![Beli Saham dan SBN_2](https://github.com/user-attachments/assets/431dcee9-5a7e-44da-86d6-02a06c5f2fd4)
+Pada menu **Beli Saham**, customer akan diarahkan terlebih dahulu ke tampilan **Daftar Saham Tersedia** yang berisi daftar saham beserta kode, nama perusahaan, dan harga saham. Customer diminta untuk memilih saham yang ingin dibeli dengan cara memasukkan **kode saham** yang tertera pada daftar.
+
+Setelah memilih kode saham, customer akan diminta untuk memasukkan **jumlah lembar saham** yang ingin dibeli. Apabila input kode saham dan jumlah lembar yang dimasukkan valid, maka sistem akan memproses pembelian dan menambahkan saham tersebut ke dalam portofolio customer melalui opsi **Lihat Portofolio di menu customer**. Setelah berhasil, akan muncul pesan:
+ ```
+ Berhasil membeli saham!
+ ```
+
+![Beli Saham dan SBN_3](https://github.com/user-attachments/assets/487bc6df-5324-46f9-b935-3076d14ca2cd)
+![Beli Saham dan SBN_4](https://github.com/user-attachments/assets/dabe2fbb-ee01-49e4-b913-0b9fadf890a0)
+![Beli Saham dan SBN_5](https://github.com/user-attachments/assets/fac83d3b-a5cb-468a-b6bb-469901ed86b2)
+Sedangkan pada menu **Beli SBN**, customer akan diarahkan ke tampilan **Daftar Surat Berharga Negara (SBN)** yang tersedia. Customer akan memilih SBN yang diinginkan dengan memasukkan **nama SBN** yang tertera pada daftar.
+
+Setelah memilih nama SBN, customer akan diminta untuk menginputkan **nominal pembelian dalam satuan rupiah**. Sistem kemudian akan memeriksa apakah kuota nasional dari SBN tersebut masih mencukupi untuk nominal pembelian yang diinputkan. Jika kuota masih mencukupi, sistem akan mengurangi kuota nasional SBN sebesar nominal yang dibeli, lalu menambahkan pembelian SBN tersebut ke dalam portofolio customer, sehingga customer dapat membeli SBN yang sama berkali-kali selama kuota nasional masih tersedia. Setelah itu akan muncul pesan:
+ ```
+ Berhasil membeli SBN!
+ ```
+Apabila customer kembali melihat daftar SBN melalui menu **Lihat Daftar SBN**, maka akan terlihat bahwa kuota nasional dari SBN yang dibeli telah berkurang sesuai dengan nominal pembelian yang dilakukan.
+
+![Beli Saham dan SBN_6](https://github.com/user-attachments/assets/dd25800a-e6bc-4f9e-ab0e-f73f4339f7e3)
+Namun, **jika kuota nasional SBN tidak mencukupi** untuk nominal pembelian yang diinputkan, maka sistem akan menolak pembelian dan menampilkan pesan:
+ ```
+ Kuota SBN tidak mencukupi
+ ```
+Selain itu, jika **nama SBN yang dimasukkan tidak ditemukan** dalam daftar SBN yang tersedia, sistem juga akan menampilkan pesan gagal yang sesuai dengan kondisi tersebut.
+
+## Jual Saham
+![Jual Saham_1](https://github.com/user-attachments/assets/c6403e34-aead-4319-aa7e-0cad54b44aee)
+![Jual Saham_2](https://github.com/user-attachments/assets/82542432-4555-4e62-88af-19d134a4cb6a)
+Pada menu **Jual Saham**, customer akan diarahkan terlebih dahulu ke tampilan **Saham yang Dimiliki**, yang berisi daftar saham yang telah dimiliki oleh customer. Daftar ini menampilkan informasi penting seperti **Kode Saham**, **Jumlah Lembar**, **Total Beli**, dan **Nilai Pasar**. Data ini membantu customer melihat saham mana saja yang tersedia untuk dijual. Setelah melihat daftar saham, customer diminta untuk memilih saham yang ingin dijual dengan cara memasukkan **kode saham yang dimiliki**. Selanjutnya, customer akan diminta untuk memasukkan **jumlah lembar saham** yang ingin dijual.
+
+Apabila input kode saham benar dan jumlah lembar yang ingin dijual tidak melebihi jumlah lembar yang dimiliki, maka sistem akan memproses penjualan. Jumlah saham customer dalam portofolio akan dikurangi sesuai dengan jumlah yang dijual. Jika seluruh lembar saham habis terjual, data saham tersebut akan otomatis dihapus dari portofolio customer. Setelah berhasil, sistem akan menampilkan pesan:
+ ```
+ Berhasil menjual SBN!
+ ```
+
+![Jual Saham_3](https://github.com/user-attachments/assets/3ecb6418-d516-4ab6-8c0b-acbc02b74c53)
+Customer dapat memverifikasi hasil penjualan ini dengan memilih opsi **Lihat Portofolio** di menu customer, di mana jumlah lembar saham akan berkurang atau bahkan hilang dari daftar jika jumlahnya sudah habis. Namun, jika jumlah lembar yang ingin dijual **melebihi jumlah yang dimiliki**, maka sistem akan menolak transaksi dan akan menampilkan pesan kesalahan:
+ ```
+ Jumlah saham tidak mencukupi
+ ```
+Dengan demikian, sistem menjaga agar customer hanya bisa menjual saham yang memang dimiliki dalam jumlah yang valid dan sesuai catatan portofolio.

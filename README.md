@@ -114,8 +114,8 @@ Setelah user memilih untuk melakukan login sebagai siapa, user akan  diminta log
 
 ## Menu Administrator
 ![Menu Admin_1](https://github.com/user-attachments/assets/87ec80ee-9f73-468c-ab2b-0727d19b8519)
-![Menu Admin_2](https://github.com/user-attachments/assets/d5a2c0ae-a499-42bd-b44d-a3d9a4883661)
-![Menu Admin_3](https://github.com/user-attachments/assets/4f725c8e-82de-4b5c-927e-01dc372fb0d5)
+![Menu Admin_2](https://github.com/user-attachments/assets/8d37b1b7-a774-4be3-9f4a-a925de1d02e8)
+![Menu Admin_3](https://github.com/user-attachments/assets/aa4bb68b-fefc-42b7-a75e-01a9b64900cc)
 Setelah melakukan login sebagai administrator, user akan diberikan instruksi pada menu utama administrator seperti pada gambar di atas. Di menu ini, admin dapat memilih untuk mengelola data saham, mengelola data surat berharga negara (SBN), atau melakukan logout dari sistem dengan menginputkan angka sesuai dengan pilihan yang tersedia.
 
 Jika admin memilih untuk **mengelola saham**, maka akan diarahkan ke submenu **Kelola Saham - Admin** seperti pada gambar berikutnya. Pada submenu ini, admin dapat melakukan beberapa aksi penting seperti:
@@ -132,7 +132,7 @@ Jika admin memilih untuk **mengelola surat berharga negara (SBN)**, maka akan di
  - Atau kembali ke menu utama administrator.
 
 ## Menu Customer
-![Menu Customer](https://github.com/user-attachments/assets/dae601dc-4143-4bff-925b-1a1a5a0732a9)
+![Menu Customer](https://github.com/user-attachments/assets/0bdad0df-ae3c-4e55-9e48-db1c369bc45e)
 Setelah melakukan login sebagai customer, user akan diberikan instruksi kembali pada menu utama customer seperti pada gambar berikut. Pada menu ini, customer akan diminta untuk memilih opsi dengan menginputkan angka sesuai dengan pilihan yang tersedia. Fitur-fitur yang dapat dilakukan oleh customer, yaitu:
  - Customer dapat membeli saham dari daftar saham yang tersedia di sistem.
  - Customer dapat menjual saham yang telah dimiliki dalam portofolionya.

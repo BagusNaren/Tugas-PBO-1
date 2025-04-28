@@ -105,7 +105,7 @@ Dalam membangun program ini, kami menggunakan berbagai konsep dari Pemrograman B
 ## Fitur-fitur Program
 Di bawah ini merupakan penggunaan dan fitur-fitur dari Program Investasi Saham dan Surat Berharga Negara (SBN) beserta hasil screenshotdari setiap skenario kode program. Beberapa penjelasan mengenai bagaimana kode program berjalan dijelaskan di bawah ini.
 ### Login Admin dan Customer
-![Login User   Admin_1](https://github.com/user-attachments/assets/cdfd2a1e-8ff9-4b5b-8e6c-239f74194550)
+![Login User   Admin_1](https://github.com/user-attachments/assets/6e4a66ee-4da1-43c8-801e-c5488cf86c5f)
 ![Login User   Admin_2](https://github.com/user-attachments/assets/a9c236b8-f280-4114-bd90-940f9119ef1b)
 ![Login User   Admin_3](https://github.com/user-attachments/assets/d618a4cb-0423-4d0f-96be-1677afee88d3)
 ![Login User   Admin_4](https://github.com/user-attachments/assets/802b0d1f-c3ae-43a8-8613-ee2f7a714ad9)

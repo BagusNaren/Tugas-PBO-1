@@ -1,4 +1,4 @@
-![Ubah Harga Saham_1](https://github.com/user-attachments/assets/6b24d7da-31a2-4a6d-a6f5-a6fffc4f0ebd)# PBO-Tugas1
+# PBO-Tugas1
 
 # Program Investasi Saham dan Surat Berharga Negara (SBN)
 

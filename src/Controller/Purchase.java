@@ -159,7 +159,15 @@ public class Purchase {
         if (bunga > 0) {
             // Hitung estimasi kupon bulanan (dengan asumsi pajak 10%)
             double kuponBulanan = bunga / 12 / 100 * 0.9 * nominal;
-            System.out.println("Estimasi kupon per bulan: Rp " + (int)kuponBulanan);
+
+            System.out.println("=======================================================================");
+            System.out.println("||                        HASIL SIMULASI SBN                         ||");
+            System.out.println("=======================================================================");
+            System.out.printf ("|| %-65s ||\n", "Nama SBN           : " + nama);
+            System.out.printf ("|| %-65s ||\n", String.format("Nominal Investasi  : Rp %,d", nominal));
+            System.out.printf ("|| %-65s ||\n", String.format("Estimasi Kupon/bln : Rp %,d", (int)kuponBulanan));
+            System.out.println("=======================================================================");
+
         } else {
             Menu.pesanGagal("SBN tidak ditemukan");
         }

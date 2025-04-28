@@ -249,7 +249,8 @@ Customer dapat memverifikasi hasil penjualan ini dengan memilih opsi **Lihat Por
 Dengan demikian, sistem menjaga agar customer hanya bisa menjual saham yang memang dimiliki dalam jumlah yang valid dan sesuai catatan portofolio.
 
 ## Simulasi SBN
-![Simulasi SBN](https://github.com/user-attachments/assets/85933fc6-a9c5-4a4f-9a43-64f95736cbe8)
+![Simulasi SBN_1](https://github.com/user-attachments/assets/582c6272-90f8-40ca-951d-9aed2807e63d)
+![Simulasi SBN_2](https://github.com/user-attachments/assets/426508e0-4ac7-4830-a6b0-971d226a39c4)
 Pada menu **Simulasi SBN**, customer akan diarahkan ke tampilan untuk melakukan simulasi perhitungan estimasi kupon bulanan berdasarkan investasi pada Surat Berharga Negara (SBN) yang tersedia. Pada tahap ini, customer diminta untuk **memasukkan nama SBN** yang ingin disimulasikan dari daftar SBN yang tersedia di sistem. Setelah memasukkan nama SBN, customer akan diminta untuk **menginputkan nominal investasi** dalam satuan rupiah.
 
 Setelah data nama SBN dan nominal investasi diinputkan, sistem akan mencari SBN yang sesuai dari daftar SBN yang ada. Jika nama SBN ditemukan, sistem akan mengambil nilai bunga tahunan (kupon) dari SBN tersebut dan melakukan perhitungan estimasi kupon bulanan.
@@ -257,7 +258,7 @@ Setelah data nama SBN dan nominal investasi diinputkan, sistem akan mencari SBN 
 Perhitungan estimasi kupon bulanan dilakukan dengan rumus berikut:
 - Kupon bulanan = (bunga tahunan / 12) × (1 - pajak 10%) × nominal investasi
 
-Setelah proses perhitungan selesai, sistem akan menampilkan hasil estimasi kupon bulanan dalam format rupiah, misalnya:
+Setelah proses perhitungan selesai, sistem akan menampilkan kembali Nama SBN, Nominal Investasi, dan hasil estimasi kupon bulanan dalam format rupiah, misalnya:
  ```
  Estimasi kupon per bulan: Rp 48.749
  ```

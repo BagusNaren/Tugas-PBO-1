@@ -133,7 +133,7 @@ Jika admin memilih untuk **mengelola surat berharga negara (SBN)**, maka akan di
  - Atau kembali ke menu utama administrator.
 
 ### Menu Customer
-![Menu Customer](https://github.com/user-attachments/assets/e9b02a6d-a2db-470f-99df-14e7dd062da8)
+![Menu Customer](https://github.com/user-attachments/assets/dae601dc-4143-4bff-925b-1a1a5a0732a9)
 Setelah melakukan login sebagai customer, user akan diberikan instruksi kembali pada menu utama customer seperti pada gambar berikut. Pada menu ini, customer akan diminta untuk memilih opsi dengan menginputkan angka sesuai dengan pilihan yang tersedia. Fitur-fitur yang dapat dilakukan oleh customer, yaitu:
  - Customer dapat membeli saham dari daftar saham yang tersedia di sistem.
  - Customer dapat menjual saham yang telah dimiliki dalam portofolionya.

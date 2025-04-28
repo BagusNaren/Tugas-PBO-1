@@ -18,11 +18,11 @@ Di bawah ini akan dijelaskan fitur utama, cara kerja program, struktur kelas yan
 
 * Nama  : I Gusti Bagus Narendratanaya Wiweka  
   NIM   : 2405551007  
-  Mata Kuliah: PBO (E)
+  Mata Kuliah : PBO (E)
 
 * Nama  : Anak Agung Ngurah Bramanda Maha Saputra  
   NIM   : 2405551018  
-  Mata Kuliah: PBO (E)
+  Mata Kuliah : PBO (E)
 
 ---
 
@@ -95,5 +95,20 @@ Dalam membangun program ini, kami menggunakan berbagai konsep dari Pemrograman B
 1. **Penggunaan Class dan Object** dalam memodelkan entitas investasi.
 2. **Control Flow Statements** seperti while loop, do-while loop, if-else, dan switch-case untuk mengelola alur program.
 3. **ArrayList** digunakan untuk menyimpan daftar produk investasi dan portofolio.
-4. **Inheritance** untuk membuat hubungan antara pengguna (admin dan customer).
+4. **Inheritance** untuk memperluas fungsionalitas penanganan error input dengan mewarisi sifat dari kelas Exception melalui pembuatan kelas InvalidInputException, yang digunakan oleh kelas Input untuk validasi input user.
 5. **Encapsulation** dalam pengaturan atribut dan metode di setiap class.
+
+---
+
+# Struktur Program
+
+## Fitur-fitur Program
+Di bawah ini merupakan penggunaan dan fitur-fitur dari Program Investasi Saham dan Surat Berharga Negara (SBN) beserta hasil screenshotdari setiap skenario kode program. Beberapa penjelasan mengenai bagaimana kode program berjalan dijelaskan di bawah ini.
+### Login Admin dan Customer
+![Login User   Admin_1](https://github.com/user-attachments/assets/cdfd2a1e-8ff9-4b5b-8e6c-239f74194550)
+![Login User   Admin_2](https://github.com/user-attachments/assets/a9c236b8-f280-4114-bd90-940f9119ef1b)
+![Login User   Admin_3](https://github.com/user-attachments/assets/d618a4cb-0423-4d0f-96be-1677afee88d3)
+![Login User   Admin_4](https://github.com/user-attachments/assets/802b0d1f-c3ae-43a8-8613-ee2f7a714ad9)
+![Login User   Admin_5](https://github.com/user-attachments/assets/097b477c-2f87-4ddd-a0a1-44afa39e6056)
+![Login User   Admin_6](https://github.com/user-attachments/assets/c93d4684-219c-4be5-b5f5-056cb4501c5c)
+Setelah user memilih untuk melakukan login sebagai siapa, user akan  diminta login dengan username dan password mereka (yang di-hardcode dalam program). Jika login berhasil, maka user akan diarahkan ke menu sesuai role mereka. Jika login gagal, maka akan muncul pesan error untuk memberikan user dan password yang benar, lalu user akan kembali diminta untuk memilih login sebagai siapa, seperti gambar di atas.

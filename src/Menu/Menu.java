@@ -150,7 +150,7 @@ public class Menu {
 
     public static void simulasiSBN() {
         System.out.println("=======================================================================");
-        System.out.println("||                       SIMULASI BUNGA SBN                          ||");
+        System.out.println("||                         SIMULASI BUNGA SBN                        ||");
         System.out.println("||    Simulasikan Bunga Bulanan Berdasarkan Jumlah Investasi Anda    ||");
         System.out.println("=======================================================================");
     }

@@ -303,7 +303,7 @@ Apabila customer **belum membeli saham ataupun SBN sama sekali**, maka keseluruh
  ```
 Prompt ini memungkinkan customer untuk kembali ke menu utama. Maka dengan adanya menu ini, customer dapat dengan mudah memonitor investasi yang telah dilakukan, baik dari sisi jumlah kepemilikan maupun nilai aset yang sedang berjalan.
 
-## Tampilan Validasi Meenu
+## Tampilan Validasi Menu
 ![Validasi_1](https://github.com/user-attachments/assets/72df0a8b-0534-4f28-909e-0c73d003183b)
 ![Validasi_2](https://github.com/user-attachments/assets/64303214-8f11-4c9f-8438-65d62a1d7a6e)
 Pada berbagai menu dalam aplikasi, seperti menu **Tambah Saham**, sistem menerapkan mekanisme validasi input untuk memastikan data yang diberikan oleh user sesuai dengan ketentuan yang berlaku. Jika terjadi kesalahan dalam input, sistem akan menampilkan **tampilan pesan kegagalan** menggunakan fungsi pesanGagal. Tampilan ini muncul dalam dua kondisi utama, yaitu:

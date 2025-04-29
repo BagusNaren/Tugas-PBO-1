@@ -169,7 +169,7 @@ Begitu juga dalam proses penambahan Surat Berharga Negara (SBN), seperti pada ga
 
 Selanjutnya, sistem akan menampilkan **daftar SBN terbaru** yang sudah diperbarui dengan data SBN yang baru saja diinputkan. Dengan demikian, admin dapat langsung memastikan bahwa penambahan SBN telah berhasil dan terlihat pada daftar yang tersedia.
 
-## Ubah Saham
+## Ubah Harga Saham
 Pada submenu **Kelola Saham - Admin**, admin dapat memilih opsi untuk mengubah harga saham yang sudah terdaftar. Setelah memilih opsi ini, akan ditampilkan form input dengan prompt:
 ![Ubah Harga Saham_1](https://github.com/user-attachments/assets/49ac731f-78bd-4d62-b406-12b05d76044e)
 Admin kemudian akan diminta untuk memilih kode saham dari **daftar saham yang tersedia**, kemudian menginputkan **harga baru** untuk saham tersebut. Setelah admin selesai memasukkan harga baru dan mengonfirmasi perubahan, program akan menampilkan pesan sukses berupa:
@@ -248,10 +248,10 @@ Customer dapat memverifikasi hasil penjualan ini dengan memilih opsi **Lihat Por
  ```
 Dengan demikian, sistem menjaga agar customer hanya bisa menjual saham yang memang dimiliki dalam jumlah yang valid dan sesuai catatan portofolio.
 
-## Simulasi SBN
-![Simulasi SBN_1](https://github.com/user-attachments/assets/582c6272-90f8-40ca-951d-9aed2807e63d)
+## Simulasi Bunga SBN
+![Simulasi SBN_1](https://github.com/user-attachments/assets/0c706835-6666-44cc-93b4-43c6a8d4fac4)
 ![Simulasi SBN_2](https://github.com/user-attachments/assets/426508e0-4ac7-4830-a6b0-971d226a39c4)
-Pada menu **Simulasi SBN**, customer akan diarahkan ke tampilan untuk melakukan simulasi perhitungan estimasi kupon bulanan berdasarkan investasi pada Surat Berharga Negara (SBN) yang tersedia. Pada tahap ini, customer diminta untuk **memasukkan nama SBN** yang ingin disimulasikan dari daftar SBN yang tersedia di sistem. Setelah memasukkan nama SBN, customer akan diminta untuk **menginputkan nominal investasi** dalam satuan rupiah.
+Pada menu **Simulasi Bunga SBN**, customer akan diarahkan ke tampilan untuk melakukan simulasi perhitungan estimasi kupon bulanan berdasarkan investasi pada Surat Berharga Negara (SBN) yang tersedia. Pada tahap ini, customer diminta untuk **memasukkan nama SBN** yang ingin disimulasikan dari daftar SBN yang tersedia di sistem. Setelah memasukkan nama SBN, customer akan diminta untuk **menginputkan nominal investasi** dalam satuan rupiah.
 
 Setelah data nama SBN dan nominal investasi diinputkan, sistem akan mencari SBN yang sesuai dari daftar SBN yang ada. Jika nama SBN ditemukan, sistem akan mengambil nilai bunga tahunan (kupon) dari SBN tersebut dan melakukan perhitungan estimasi kupon bulanan.
 
@@ -269,3 +269,75 @@ Namun, apabila nama SBN yang dimasukkan **tidak ditemukan** dalam daftar, maka s
  ```
 
 Setelah simulasi selesai, sistem akan menampilkan perintah **"Tekan Enter untuk kembali"** agar customer dapat melanjutkan ke menu lainnya.
+
+## Lihat Portofolio
+![Lihat Portofolio_1](https://github.com/user-attachments/assets/94a361b7-c208-4ed8-96ad-bb33ed0de7e0)
+![Lihat Portofolio_2](https://github.com/user-attachments/assets/5fac3092-d956-4b54-9485-3a5c4c016f59)
+Pada menu **Lihat Portofolio**, customer dapat melihat seluruh kepemilikan aset investasi yang dimiliki, baik berupa **Saham** maupun **Surat Berharga Negara (SBN)**, yang telah dibeli sebelumnya melalui aplikasi. Setelah memilih opsi **Lihat Portofolio** pada menu customer, sistem akan menampilkan tampilan portofolio yang dibagi menjadi dua bagian utama, yaitu:
+1. Bagian Portofolio Saham
+Pada bagian ini, customer dapat melihat daftar saham yang dimiliki lengkap dengan informasi berikut:
+   - **Kode Saham**: Kode unik dari saham yang dibeli,
+   - **Jumlah Lembar**: Jumlah saham yang dimiliki dalam satuan lembar,
+   - **Total Nominal Pembelian**: Nilai total pembelian saham berdasarkan harga beli saat itu, dalam satuan Rupiah,
+   - **Total Nilai Pasar**: Nilai saham berdasarkan harga pasar saat ini, dalam satuan Rupiah.
+
+Jika customer belum memiliki saham, maka pada bagian ini akan ditampilkan pesan:
+ ```
+ Tidak ada saham
+ ```
+
+2. Bagian Portofolio SBN
+Pada bagian ini, customer dapat melihat daftar Surat Berharga Negara (SBN) yang dimiliki lengkap dengan informasi berikut:
+   - **Nama SBN**: Nama dari SBN yang dibeli,
+   - **Total Nominal Pembelian**: Jumlah nominal investasi customer pada SBN tersebut, dalam satuan Rupiah,
+   - **Bunga per Bulan**: Estimasi nilai bunga yang diterima setiap bulan dari investasi SBN, setelah dihitung berdasarkan persentase bunga tahunan.
+
+Jika customer belum memiliki SBN, maka pada bagian ini akan ditampilkan pesan:
+ ```
+ Tidak ada SBN
+ ```
+
+Apabila customer **belum membeli saham ataupun SBN sama sekali**, maka keseluruhan isi dari portofolio akan menampilkan informasi bahwa **tidak ada saham atau SBN yang dimiliki**. Setelah informasi portofolio selesai ditampilkan, sistem akan memberikan prompt:
+ ```
+ Tekan Enter untuk kembali
+ ```
+Prompt ini memungkinkan customer untuk kembali ke menu utama. Maka dengan adanya menu ini, customer dapat dengan mudah memonitor investasi yang telah dilakukan, baik dari sisi jumlah kepemilikan maupun nilai aset yang sedang berjalan.
+
+## Tampilan Validasi Meenu
+![Validasi_1](https://github.com/user-attachments/assets/72df0a8b-0534-4f28-909e-0c73d003183b)
+![Validasi_2](https://github.com/user-attachments/assets/64303214-8f11-4c9f-8438-65d62a1d7a6e)
+Pada berbagai menu dalam aplikasi, seperti menu **Tambah Saham**, sistem menerapkan mekanisme validasi input untuk memastikan data yang diberikan oleh user sesuai dengan ketentuan yang berlaku. Jika terjadi kesalahan dalam input, sistem akan menampilkan **tampilan pesan kegagalan** menggunakan fungsi pesanGagal. Tampilan ini muncul dalam dua kondisi utama, yaitu:
+1. **Input Tidak Boleh Kosong**: Ketika user tidak memberikan input apapun pada kolom isian yang wajib diisi, seperti saat mengisi data **Kode Saham**, **Nama Perusahaan**, atau **Harga Saham** pada menu **Tambah Saham**, maka sistem akan memunculkan pesan:
+   ```
+   Input tidak boleh kosong
+   ```
+Tampilan ini mengingatkan user bahwa seluruh data yang diminta harus diisi sebelum dapat melanjutkan ke proses berikutnya.
+
+2. **Pilihan Tidak Valid**: Ketika user memberikan input yang tidak sesuai dengan opsi yang tersedia pada menu, misalnya memasukkan angka atau pilihan yang tidak ada dalam daftar, maka sistem akan menampilkan pesan:
+   ```
+   Pilihan tidak valid
+   ```
+Tampilan ini bertujuan untuk memperingatkan user bahwa input yang diberikan tidak dikenali oleh sistem dan meminta user untuk memilih kembali dari opsi yang benar.
+
+Setiap kali terjadi kegagalan input, sistem akan menampilkan struktur tampilan sebagai berikut:
+- Sebuah kotak bertuliskan **GAGAL** di bagian atas,
+- Pesan kegagalan (seperti "Input tidak boleh kosong" atau "Pilihan tidak valid") ditampilkan di tengah,
+- Diikuti dengan instruksi:
+   ```
+   Tekan Enter untuk Kembali
+   ```
+  Instruksi tersebut menunggu user untuk menekan Enter sebelum kembali ke menu sebelumnya.
+
+Dengan mekanisme ini, sistem memastikan bahwa setiap input yang masuk adalah valid dan sesuai, sekaligus memberikan pengalaman penggunaan yang lebih terstruktur dan ramah bagi user.
+
+---
+
+# Catatan
+
+- Program ini **sepenuhnya berbasis memory**, tidak menggunakan database atau file.
+- Akun login hanya ada dalam bentuk **hardcoded**.
+- Semua proses transaksi dan portofolio diselesaikan di dalam satu sesi run-time program.
+
+---
+
+# Terima kasih telah membaca dokumentasi kami! 🎉
